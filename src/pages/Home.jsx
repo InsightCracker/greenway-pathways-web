@@ -12,9 +12,8 @@ const FEATURED_PROGRAMS = [
 export default function Home() {
   return (
     <>
-      {/* Full-bleed hero — outside the padded content wrapper */}
       <Hero />
-
+      
       <div className="mx-auto px-6 py-14">
         <section>
           <StatBar />
