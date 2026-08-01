@@ -33,7 +33,6 @@
   }
 }
 
-/* ---- OS-level preference, used only until the user picks explicitly ---- */
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9aa5ac;
@@ -54,9 +53,6 @@
   }
 }
 
-/* ---- explicit user choice (ThemeContext sets this attribute) ----   */
-/* wins over the media query above regardless of OS setting, since    */
-/* an attribute selector on :root is more specific than a bare :root   */
 :root[data-theme="light"] {
   --text: #5a6570;
   --text-h: #1b4d3e;
@@ -94,7 +90,7 @@ body {
 }
 
 #root {
-  width: 1126px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   min-height: 100svh;
