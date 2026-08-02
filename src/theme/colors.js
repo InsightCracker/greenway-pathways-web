@@ -1,6 +1,3 @@
-// JS-readable mirror of the CSS custom properties in index.css.
-// Use this wherever a color is needed outside of Tailwind classes —
-// e.g. a charting library, canvas, or the mobile browser theme-color meta tag.
 export const colors = {
   light: {
     text: '#5a6570',
