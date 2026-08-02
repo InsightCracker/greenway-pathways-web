@@ -19,13 +19,13 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center gap-3 sm:gap-4">
-        <p className="reveal reveal-1 text-[11px] sm:text-[13px] font-semibold tracking-wide text-[var(--accent)]">
+        <p className="reveal reveal-1 text-[13px] sm:text-[15px] font-semibold tracking-wide text-[var(--accent)]">
           CREATING OPPORTUNITIES, TRANSFORMING LIVES
         </p>
-        <p className="reveal reveal-2 mt-2 text-[2.5rem] sm:text-[36px] md:text-[40px] font-medium leading-tight text-white sm:mt-3">
+        <p className="font-display uppercase reveal reveal-2 mt-2 text-[2.2rem] sm:text-[45px] md:text-[55px] font-medium leading-tight text-white sm:mt-3">
           Pathways to education, dignity &amp; opportunity
         </p>
-        <p className="reveal reveal-3 mt-3 max-w-xs text-[14px] text-white/70 sm:mt-4 sm:max-w-md sm:text-[15px]">
+        <p className="reveal reveal-3 mt-3 max-w-xs text-[16px] text-white/70 sm:mt-4 sm:max-w-md sm:text-[20px]">
           Greenway Pathways Foundation partners with communities across Nigeria to expand
           access to education, health, and economic opportunity.
         </p>

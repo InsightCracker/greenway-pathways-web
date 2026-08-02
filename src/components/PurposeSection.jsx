@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Flag, Eye, Compass } from 'lucide-react'
+import { useInView } from '../hooks/useInView'
 
 const PURPOSE = [
   {
@@ -21,29 +22,6 @@ const PURPOSE = [
   }
 ]
 
-function useInView() {
-  const ref = useRef(null)
-  const [inView, setInView] = useState(false)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true)
-          obs.disconnect()
-        }
-      },
-      { threshold: 0.2 }
-    )
-    obs.observe(el)
-    return () => obs.disconnect()
-  }, [])
-
-  return [ref, inView]
-}
-
 export default function PurposeSection() {
   const [headingRef, headingInView] = useInView()
 
@@ -51,7 +29,7 @@ export default function PurposeSection() {
     <section className="px-6 py-20 sm:py-28">
       <div className="mx-auto">
         <div ref={headingRef} className="relative flex flex-col items-center text-center">
-          <p className="text-[28px] font-semibold text-[var(--text-h)] sm:text-[45px]">
+          <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[45px]">
             Our Purpose
           </p>
           <svg
@@ -70,7 +48,7 @@ export default function PurposeSection() {
           </svg>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-3">
           {PURPOSE.map((item, i) => (
             <PurposeCard key={item.title} item={item} index={i} />
           ))}
@@ -107,14 +85,14 @@ function PurposeCard({ item, index }) {
       } ${inView ? 'is-in' : ''}`}
       style={{ transitionDelay: inView ? `${index * 120}ms` : '0ms' }}
     >
-      <span className="icon-ring relative flex h-16 w-16 items-center justify-center rounded-full bg-[var(--bg)] shadow-sm transition-transform duration-500 group-hover:-translate-y-1">
-        <Icon size={26} className="text-[var(--text-h)]" strokeWidth={1.75} />
+      <span className="icon-ring relative flex h-16 w-16 mb-6 items-center justify-center rounded-full bg-[var(--bg)] shadow-sm transition-transform duration-500 group-hover:-translate-y-1">
+        <Icon size={28} className="text-[var(--text-h)]" strokeWidth={1.75} />
         <span className="icon-pulse absolute inset-0 rounded-full border border-[var(--accent)]" />
       </span>
 
-      <h3 className="mt-5 mb-2 text-[25px] font-semibold text-[var(--text-h)]">{item.title}</h3>
+      <h3 className="mt-5 mb-2 text-[30px] font-semibold text-[var(--text-h)]">{item.title}</h3>
 
-      <p className="mt-5 text-[17px] leading-relaxed text-[var(--text)]">
+      <p className="mt-5 text-[20px] leading-relaxed text-[var(--text)]">
         {item.body}
       </p>
 

@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: 'About', to: '/about' },
   { label: 'Programs', to: '/programs' },
   { label: 'Contact', to: '/contact' },
+  { label: 'News', to: '/news'}
 ]
 
 export default function Navbar() {
@@ -23,7 +24,7 @@ export default function Navbar() {
   }, [])
 
   const linkClass = ({ isActive }) =>
-    `nav-link relative text-[14px] font-medium transition-colors ${
+    `nav-link relative text-[15px] font-medium transition-colors ${
       isActive ? 'text-[var(--text-h)] is-active' : 'text-[var(--text)] hover:text-[var(--text-h)]'
     }`
 
