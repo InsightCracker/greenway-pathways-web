@@ -1,29 +1,30 @@
 import ProgramCard from '../components/ProgramCard.jsx'
+import ProgramsHero from '../components/ProgramsHero.jsx'
 import DonateBanner from '../components/DonateBanner.jsx'
-
-const PROGRAMS = [
-  { title: 'Education', description: 'Scholarships, tutoring, and school infrastructure support.' },
-  { title: 'Youth development', description: 'Mentorship, leadership training, and vocational skills.' },
-  { title: "Women & girls' empowerment", description: 'Economic independence and protection programmes.' },
-  { title: 'Humanitarian assistance', description: 'Emergency response and relief for displaced communities.' },
-  { title: 'Environmental sustainability', description: 'Community-led conservation and clean-energy projects.' },
-  { title: 'Economic empowerment', description: 'Skills training, micro-grants, and livelihood support.' },
-]
+import { PROGRAMS } from '../data/programs.js'
 
 export default function Programs() {
   return (
-    <div className="mx-auto max-w-[1126px] px-6 py-14 text-left">
-      <p className="text-[13px] font-semibold tracking-wide text-[var(--accent)]">PROGRAMMES</p>
-      <h1 className="mt-2 text-[32px] font-medium text-[var(--text-h)]">What we do, and how</h1>
+    <div className="text-left">
+      <ProgramsHero />
 
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {PROGRAMS.map((p) => (
-          <ProgramCard key={p.title} {...p} />
-        ))}
-      </div>
+      <div className="mx-auto max-w-[1126px] px-6 py-16 sm:py-20">
+        <h2 className="font-display mt-3 text-[40px] leading-[1.1] text-[var(--text-h)] sm:text-[45px]">
+            Our Focus Areas
+        </h2>
+        <p className="mt-5 text-[15px] leading-relaxed text-[var(--text)]">
+          Discover the key areas where we're creating opportunities and driving meaningful change.
+        </p>
 
-      <div className="mt-14">
-        <DonateBanner />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          {PROGRAMS.map((program, i) => (
+            <ProgramCard key={program.slug} program={program} index={i} />
+          ))}
+        </div>
+
+        <div className="mt-16">
+          <DonateBanner />
+        </div>
       </div>
     </div>
   )

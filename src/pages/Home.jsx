@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom'
+import { useInView } from '../hooks/useInView.js'
+import { PROGRAMS } from '../data/programs.js'
 import Hero from '../components/Hero.jsx'
 import StatBar from '../components/StatBar.jsx'
 import ProgramCard from '../components/ProgramCard.jsx'
 import DonateBanner from '../components/DonateBanner.jsx'
 import PurposeSection from '../components/PurposeSection.jsx'
 import ValuesCarousel from '../components/ValuesCarousel.jsx'
-import { useInView } from '../hooks/useInView.js'
 import NewsSection from '../components/NewsSection.jsx'
 
 const FEATURED_PROGRAMS = [
@@ -27,6 +29,7 @@ const FEATURED_PROGRAMS = [
 
 export default function Home() {
   const [headingRef, headingInView] = useInView()
+  const FEATURED_PROGRAMS = PROGRAMS.slice(0, 3)
 
   return (
     <>
@@ -42,31 +45,41 @@ export default function Home() {
 
       <div className="mx-auto px-6 py-14">
         <section className="mt-16 text-left">
-          <div ref={headingRef} className="font-display relative flex flex-col items-center text-center">
-            <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[45px]">
-              What We Do
-            </p>
-            <svg
-              viewBox="0 0 220 20"
-              className="mt-2 h-4 w-[180px] sm:w-[220px]"
-              aria-hidden="true"
-            >
-              <path
-                d="M6 14C50 2 160 2 214 12"
-                fill="none"
-                stroke="var(--accent)"
-                strokeWidth="4"
-                strokeLinecap="round"
-                className={`underline-path ${headingInView ? 'is-drawn' : ''}`}
-              />
-            </svg>
-          </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-3">
-            {FEATURED_PROGRAMS.map((p) => (
-              <ProgramCard key={p.title} {...p} />
-            ))}
-          </div>
-        </section>
+    <div ref={headingRef} className="relative flex flex-col items-center text-center">
+      <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[45px]">
+        What we do
+      </p>
+      <svg
+        viewBox="0 0 220 20"
+        className="mt-2 h-4 w-[180px] sm:w-[220px]"
+        aria-hidden="true"
+      >
+        <path
+          d="M6 14C50 2 160 2 214 12"
+          fill="none"
+          stroke="var(--accent)"
+          strokeWidth="4"
+          strokeLinecap="round"
+          className={`underline-path ${headingInView ? 'is-drawn' : ''}`}
+        />
+      </svg>
+    </div>
+
+    <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {FEATURED_PROGRAMS.map((program, i) => (
+        <ProgramCard key={program.slug} program={program} index={i} />
+      ))}
+    </div>
+
+    <div className="mt-8 flex justify-center">
+      <Link
+        to="/programs"
+        className="text-[13px] font-semibold text-[var(--accent)]"
+      >
+        See all programmes →
+      </Link>
+    </div>
+  </section>
 
         <section className="mt-16">
           <DonateBanner />
