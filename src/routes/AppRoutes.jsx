@@ -4,6 +4,7 @@ import Home from '../pages/Home.jsx'
 import About from '../pages/About.jsx'
 import Programs from '../pages/Programs.jsx'
 import Contact from '../pages/Contact.jsx'
+import NewsArticle from '../pages/NewsArticle.jsx'
 
 export default function AppRoutes() {
   return (
@@ -13,6 +14,7 @@ export default function AppRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/news/:slug" element={<NewsArticle />} />
       </Route>
     </Routes>
   )
