@@ -6,9 +6,9 @@ import Logo from '../components/Logo.jsx'
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
-  { label: 'Programs', to: '/programs' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'About Us', to: '/about' },
+  { label: 'Our Programs', to: '/programs' },
+  { label: 'Contact Us', to: '/contact' },
   { label: 'News', to: '/news'}
 ]
 

@@ -48,7 +48,7 @@ export default function PurposeSection() {
           </svg>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PURPOSE.map((item, i) => (
             <PurposeCard key={item.title} item={item} index={i} />
           ))}
@@ -92,7 +92,7 @@ function PurposeCard({ item, index }) {
 
       <h3 className="mt-5 mb-2 text-[30px] font-semibold text-[var(--text-h)]">{item.title}</h3>
 
-      <p className="mt-5 text-[20px] leading-relaxed text-[var(--text)]">
+      <p className="mt-5 text-[15px] sm:text-[18px] leading-relaxed text-[var(--text)]">
         {item.body}
       </p>
 

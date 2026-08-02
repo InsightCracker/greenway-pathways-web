@@ -6,8 +6,8 @@ import Logo from './Logo.jsx'
 
 const QUICK_LINKS = [
   { label: 'About us', to: '/about' },
-  { label: 'Programmes', to: '/programs' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Our Programs', to: '/programs' },
+  { label: 'Contact Us', to: '/contact' },
 ]
 
 const PROGRAMMES = [
@@ -53,7 +53,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Logo />
-            <p className="mt-4 max-w-[220px] text-[15px] leading-relaxed text-white/70">
+            <p className="mt-4 max-w-[220px] text-[13px] leading-relaxed text-white/70">
               Creating Opportunities, Transforming Lives.
             </p>
             <div className="mt-6 flex items-center gap-4">
@@ -85,13 +85,13 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <p className="text-[18px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
+            <p className="text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)] sm:text-[18px]">
               Quick links
             </p>
             <ul className="mt-4 space-y-2.5">
               {QUICK_LINKS.map((link) => (
                 <li key={link.to}>
-                  <NavLink to={link.to} className="footer-link text-[15px] text-white/75">
+                  <NavLink to={link.to} className="footer-link text-[14px] text-white/75 sm:text-[15px]">
                     {link.label}
                   </NavLink>
                 </li>
@@ -101,13 +101,13 @@ export default function Footer() {
 
           {/* Programmes */}
           <div>
-            <p className="text-[18px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
+            <p className="text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)] sm:text-[18px]">
               Programmes
             </p>
             <ul className="mt-4 space-y-2.5">
               {PROGRAMMES.map((link) => (
                 <li key={link.to}>
-                  <NavLink to={link.to} className="footer-link text-[15px] text-white/75">
+                  <NavLink to={link.to} className="footer-link text-[14px] text-white/75 sm:text-[15px]">
                     {link.label}
                   </NavLink>
                 </li>
@@ -117,10 +117,10 @@ export default function Footer() {
 
           {/* Stay updated */}
           <div>
-            <p className="text-[18px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
+            <p className="text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)] sm:text-[18px]">
               Stay updated
             </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-white/70">
+            <p className="mt-4 text-[14px] leading-relaxed text-white/70 sm:text-[15px]">
               Be first to know as our programmes launch.
             </p>
             {submitted ? (
