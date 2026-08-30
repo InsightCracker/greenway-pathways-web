@@ -15,10 +15,10 @@ export default function NewsArticle() {
         <img src={imgUrl} alt="" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-[var(--brand-green)]/70" />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-          <p className="text-[12px] font-semibold tracking-wide text-[var(--accent)]">
+          <p className="text-[14px] font-semibold tracking-wide text-[var(--accent)]">
             {post.categories.join(', ').toUpperCase()}
           </p>
-          <h1 className="font-display mt-2 max-w-2xl text-[28px] text-white sm:text-[38px]">
+          <h1 className="font-display mt-2 max-w-2xl text-[5px] text-white sm:text-[44px] leading-10 sm:leading-12">
             {post.title}
           </h1>
         </div>
@@ -28,9 +28,11 @@ export default function NewsArticle() {
         <Link to="/news" className="text-[13px] font-medium text-[var(--accent)]">
           ← All news
         </Link>
+
         <p className="mt-4 text-[13px] text-[var(--text)]">
           {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
         </p>
+
         <p className="mt-6 text-[16px] leading-relaxed text-[var(--text-h)]">{post.body}</p>
       </div>
     </article>
