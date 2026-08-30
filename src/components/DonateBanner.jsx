@@ -20,7 +20,7 @@ export default function DonateBanner() {
           </h3>
 
           <p className="mt-4 text-[15px] leading-relaxed text-white/70">
-            Greenway Pathways Foundation is just getting started, and your support helps us build our first programmes in education, youth development, and women's empowerment from the ground up.
+            Greenway Pathways Foundation is just getting started, and your support helps us build our first programs in education, youth development, and women's empowerment from the ground up.
           </p>
           
           <a

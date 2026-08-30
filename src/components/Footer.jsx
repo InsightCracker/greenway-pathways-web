@@ -102,7 +102,7 @@ export default function Footer() {
           {/* Programmes */}
           <div>
             <p className="text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)] sm:text-[18px]">
-              Programmes
+              Programs
             </p>
             <ul className="mt-4 space-y-2.5">
               {PROGRAMMES.map((link) => (
