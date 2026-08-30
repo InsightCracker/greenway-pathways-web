@@ -1,0 +1,38 @@
+export const NEWS = [
+  {
+    slug: 'welcome-to-greenway-pathways',
+    title: 'Introducing Greenway Pathways Foundation',
+    categories: ['Announcement'],
+    date: '2026-07-12',
+    image: 28593042,
+    excerpt: 'A note on why we were founded, and what we hope to build in our first year.',
+    body: 'Greenway Pathways Foundation was constituted in 2026 as a non-profit organisation registered under the Companies and Allied Matters Act (CAMA), 2020. Our founding Constitution sets out seventeen objects spanning education, youth development, women and girls\' empowerment, health, the environment, and more. As a newly established Foundation, this is the beginning of that work — updates will follow here as our first programmes take shape.',
+  },
+  {
+    slug: 'our-founding-constitution',
+    title: 'A look at our founding Constitution',
+    categories: ['Governance'],
+    date: '2026-07-15',
+    image: 6646899,
+    excerpt: 'The document that defines our aim, vision, mission, and core values.',
+    body: 'Our Constitution sets out the Foundation\'s Aim (Article 5), Vision (Article 6), and Mission (Article 7), alongside eight core values and seventeen defined objects. It also establishes our governance structure, including a Board of Trustees of between five and eleven members, responsible for strategic leadership and oversight as the Foundation grows.',
+  },
+  {
+    slug: 'building-our-first-programmes',
+    title: 'How we\'re approaching our first programmes',
+    categories: ['Programmes'],
+    date: '2026-07-20',
+    image: 21932230,
+    excerpt: 'What it looks like to design programmes from zero, deliberately.',
+    body: 'Rather than launching broadly across all seventeen of our objects at once, we\'re starting deliberately — beginning with education, youth development, and women and girls\' empowerment, and building outward as capacity and partnerships allow. Details on our first cohort of activities will be shared as they\'re finalised.',
+  },
+  {
+    slug: 'why-partnerships-matter',
+    title: 'Why partnerships matter to us from day one',
+    categories: ['Partnerships'],
+    date: '2026-07-25',
+    image: 5029929,
+    excerpt: 'Article 11.15 makes partnership a founding commitment, not an afterthought.',
+    body: 'Our Constitution names partnerships as one of our seventeen core objects: working with governments, development agencies, donors, academic institutions, and civil society to further our mission. As a new Foundation, we see this as essential — not something to pursue only once we\'ve grown, but a way of working from the outset.',
+  },
+]
