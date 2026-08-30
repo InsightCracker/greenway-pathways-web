@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { NEWS } from '../data/news.js'
+import { ArrowLeft } from 'lucide-react'
 
 export default function NewsArticle() {
   const { slug } = useParams()
@@ -11,29 +12,48 @@ export default function NewsArticle() {
 
   return (
     <article className="text-left">
-      <div className="relative h-[300px] overflow-hidden sm:h-[360px]">
-        <img src={imgUrl} alt="" className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-[var(--brand-green)]/70" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-          <p className="text-[14px] font-semibold tracking-wide text-[var(--accent)]">
+      <section className="relative flex h-[280px] items-center justify-center overflow-hidden text-center sm:h-[320px]">
+        <img
+          src="https://images.pexels.com/photos/6646892/pexels-photo-6646892.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[var(--brand-green)]/80" />
+
+        <div className="relative">
+          <p className="text-[15px] font-medium tracking-wide text-[var(--accent)]">
             {post.categories.join(', ').toUpperCase()}
           </p>
-          <h1 className="font-display mt-2 max-w-2xl text-[5px] text-white sm:text-[44px] leading-10 sm:leading-12">
-            {post.title}
-          </h1>
+
+          <p className="font-display text-[36px] leading-[1] text-white sm:text-[44px] pt-4">{post.title} </p>
         </div>
-      </div>
+      </section>
 
       <div className="mx-auto max-w-2xl px-6 py-14">
-        <Link to="/news" className="text-[13px] font-medium text-[var(--accent)]">
-          ← All news
+        <Link
+          to="/news"
+          className="back-link inline-flex items-center gap-2 text-[15px] font-medium text-[var(--text)] transition-colors hover:text-[var(--accent)] mb-3"
+        >
+          <ArrowLeft size={15} />
+          Back to News
         </Link>
 
-        <p className="mt-4 text-[13px] text-[var(--text)]">
+        <p className="mt-8 text-[12px] font-medium uppercase tracking-wide text-[var(--text)]">
           {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
         </p>
 
-        <p className="mt-6 text-[16px] leading-relaxed text-[var(--text-h)]">{post.body}</p>
+        <div className="my-4 h-px bg-[var(--border)]" />
+
+        <p className="text-[17px] leading-[1.8] text-[var(--text-h)]">{post.body}</p>
+
+        <style>{`
+          .back-link svg {
+            transition: transform 0.25s ease;
+          }
+          .back-link:hover svg {
+            transform: translateX(-3px);
+          }
+        `}</style>
       </div>
     </article>
   )
