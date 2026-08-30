@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { PROGRAMS } from '../data/programs.js'
+import { ArrowLeft } from 'lucide-react'
 
 export default function ProgramDetail() {
   const { slug } = useParams()
@@ -11,7 +12,7 @@ export default function ProgramDetail() {
 
   return (
     <article className="text-left">
-      <div className="relative h-[300px] overflow-hidden sm:h-[360px]">
+      <div className="relative h-[280px] overflow-hidden sm:h-[360px]">
         <img src={imgUrl} alt="" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-[var(--brand-green)]/70" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
@@ -22,11 +23,17 @@ export default function ProgramDetail() {
       </div>
 
       <div className="mx-auto max-w-2xl px-6 py-14">
-        <Link to="/programs" className="text-[13px] font-medium text-[var(--accent)]">
-          ← All programmes
+        <Link
+          to="/programs"
+          className="back-link inline-flex items-center gap-2 text-[15px] font-medium text-[var(--text)] transition-colors hover:text-[var(--accent)] mb-3"
+        >
+          <ArrowLeft size={15} />
+          All programmes
         </Link>
 
-        <p className="text-[16px] sm:text-[18px] lg:text-[22px] leading-relaxed text-[var(--text-h)]">{program.body}</p>
+        <div className="my-4 h-px bg-[var(--border)]" />
+
+        <p className="text-[17px] leading-[1.8] text-[var(--text-h)]">{program.body}</p>
 
         <div className="mt-10 rounded-xl border border-dashed border-[var(--border)] bg-[var(--code-bg)] px-6 py-8 text-center">
           <p className="text-[13px] text-[var(--text)]">
