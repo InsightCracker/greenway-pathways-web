@@ -20,7 +20,7 @@ export const NEWS = [
   {
     slug: 'building-our-first-programmes',
     title: 'How we\'re approaching our first programmes',
-    categories: ['Programmes'],
+    categories: ['Programs'],
     date: '2026-07-20',
     image: 21932230,
     excerpt: 'What it looks like to design programmes from zero, deliberately.',
