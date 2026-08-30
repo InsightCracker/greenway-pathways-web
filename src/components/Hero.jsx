@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
+
 export default function Hero() {
   return (
-    <section className="relative isolate flex h-[100dvh] min-h-[560px] w-full flex-col items-center justify-center overflow-hidden px-5 pt-16 text-center sm:px-6 sm:pt-0">
+    <section className="relative isolate flex h-[100vh] min-h-[560px] w-full flex-col items-center justify-center overflow-hidden px-5 text-center sm:px-6">
       {/* Video background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -19,30 +21,33 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center gap-3 sm:gap-4">
+
         <p className="reveal reveal-1 text-[13px] sm:text-[15px] font-semibold tracking-wide text-[var(--accent)]">
           CREATING OPPORTUNITIES, TRANSFORMING LIVES
         </p>
-        <p className="font-display uppercase reveal reveal-2 mt-2 text-[2.2rem] sm:text-[45px] md:text-[55px] font-medium leading-tight text-white sm:mt-3">
+
+        <p className="font-display uppercase reveal reveal-2 mt-2 text-[2rem] sm:text-[40px] lg:text-[55px] font-medium leading-tight text-white sm:mt-3">
           Pathways to education, dignity &amp; opportunity
         </p>
+
         <p className="reveal reveal-3 mt-3 max-w-xs text-[16px] text-white/70 sm:mt-4 sm:max-w-md sm:text-[20px]">
           Greenway Pathways Foundation partners with communities across Nigeria to expand
           access to education, health, and economic opportunity.
         </p>
         <div className="reveal reveal-4 mt-5 flex w-full flex-col gap-3 sm:mt-6 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center">
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="btn-pulse rounded-full bg-[var(--accent)] px-6 py-2.5 text-[14px] font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
           >
-            Donate now
-          </a>
-          
-          <a
-            href="/programs"
-            className="rounded-full border border-white px-6 py-2.5 text-[14px] font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black/70"
+            Donate Now
+          </Link>
+
+          <Link
+            to="/programs"
+            className="rounded-full border border-white px-6 py-2.5 text-[14px] font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-[var(--brand-green)]"
           >
-            See our programmes
-          </a>
+            See Our Programs
+          </Link>
         </div>
       </div>
 
