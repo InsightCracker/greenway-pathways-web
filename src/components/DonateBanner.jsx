@@ -7,17 +7,19 @@ export default function DonateBanner() {
   ]
 
   return (
-    <div className="relative mx-auto max-w-[1126px] overflow-hidden rounded-3xl bg-[var(--brand-green)] px-8 py-14 sm:px-14">
-      <div className="grid items-center gap-12 sm:grid-cols-2">
+    <div className="relative mx-auto max-w-[1126px] overflow-hidden rounded-2xl bg-[var(--brand-green)] px-8 py-14 sm:px-14">
+      <div className="grid items-center gap-12 lg:grid-cols-2">
         {/* Text */}
-        <div className="text-left">
+        <div className="text-center lg:text-left">
           <p className="text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)] sm:text-[20px]">
             Creating opportunities, transforming lives
           </p>
+
           <h3 className="font-display my-3 text-[30px] leading-[1.1] text-white sm:text-[40px]">
             Every gift opens a pathway forward
           </h3>
-          <p className="mt-4 max-w-md text-[14px] leading-relaxed text-white/70">
+
+          <p className="mt-4 text-[15px] leading-relaxed text-white/70">
             Greenway Pathways Foundation is just getting started, and your support helps us build our first programmes in education, youth development, and women's empowerment from the ground up.
           </p>
           
@@ -25,12 +27,12 @@ export default function DonateBanner() {
             href="/contact"
             className="donate-cta mt-7 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-7 py-3 text-[14px] font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
           >
-            Donate now
+            DONATE NOW
           </a>
         </div>
 
         {/* Photo cluster */}
-        <div className="relative hidden h-[280px] sm:block">
+        <div className="relative hidden h-[280px] lg:block">
           {photos.map((p, i) => (
             <img
               key={p.id}

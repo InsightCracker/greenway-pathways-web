@@ -91,8 +91,7 @@ export default function ValuesCarousel() {
       >
         <div
           ref={trackRef}
-          className="flex gap-4 overflow-x-auto px-4 py-3 [scrollbar-width:none] snap-x snap-mandatory [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-        >
+          className="values-track flex gap-4 overflow-x-auto px-4 py-3 snap-x snap-mandatory">
           {[...VALUES, ...VALUES].map((slide, i) => (
             <Slide key={`${slide.id}-${i}`} slide={slide} index={i} />
           ))}
@@ -115,6 +114,16 @@ export default function ValuesCarousel() {
           <ChevronRight size={18} />
         </button>
       </div>
+
+      <style>{`
+        .values-track {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+        .values-track::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   )
 }

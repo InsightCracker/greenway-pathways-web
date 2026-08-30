@@ -5,7 +5,7 @@ import { FiArrowRight } from 'react-icons/fi'
 import Logo from './Logo.jsx'
 
 const QUICK_LINKS = [
-  { label: 'About us', to: '/about' },
+  { label: 'About Us', to: '/about' },
   { label: 'Our Programs', to: '/programs' },
   { label: 'Contact Us', to: '/contact' },
 ]

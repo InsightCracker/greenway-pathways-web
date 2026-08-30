@@ -1,39 +1,6 @@
+import { NEWS } from '../data/news.js'
 import NewsCard from './NewsCard.jsx'
 import { useInView } from '../hooks/useInView.js'
-
-// Placeholder shape only — replace with a fetch to your API/CMS once the
-// admin dashboard exists. Each post should carry: id, slug, title,
-// categories[], image, and (on the detail page) full body content.
-const NEWS = [
-  {
-    id: 1,
-    slug: 'sample-post-one',
-    title: 'Sample headline — replace once the admin dashboard is live',
-    categories: ['Recent News'],
-    image: 'https://images.pexels.com/photos/28593044/pexels-photo-28593044.jpeg?auto=compress&cs=tinysrgb&w=500',
-  },
-  {
-    id: 2,
-    slug: 'sample-post-two',
-    title: 'Sample headline — replace once the admin dashboard is live',
-    categories: ['Blog', 'Recent News'],
-    image: 'https://images.pexels.com/photos/8382227/pexels-photo-8382227.jpeg?auto=compress&cs=tinysrgb&w=500',
-  },
-  {
-    id: 3,
-    slug: 'sample-post-three',
-    title: 'Sample headline — replace once the admin dashboard is live',
-    categories: ['Blog'],
-    image: 'https://images.pexels.com/photos/3869652/pexels-photo-3869652.jpeg?auto=compress&cs=tinysrgb&w=500',
-  },
-  {
-    id: 4,
-    slug: 'sample-post-four',
-    title: 'Sample headline — replace once the admin dashboard is live',
-    categories: ['Recent News'],
-    image: 'https://images.pexels.com/photos/36753412/pexels-photo-36753412.jpeg?auto=compress&cs=tinysrgb&w=500',
-  },
-]
 
 export default function NewsSection() {
   const [headingRef, headingInView] = useInView()
@@ -62,8 +29,8 @@ export default function NewsSection() {
         </div>
 
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {NEWS.map((post) => (
-            <NewsCard key={post.id} post={post} />
+          {NEWS.slice(0, 4).map((post, i) => (
+            <NewsCard key={post.slug} post={post} index={i} />
           ))}
         </div>
       </div>

@@ -23,10 +23,10 @@ export default function ProgramCard({ program, index }) {
         />
       </div>
       <div className="p-5">
-        <h3 className="mt-1 text-[16px] sm:text-[22px] font-semibold text-[var(--text-h)]">{program.title}</h3>
-        <p className="mt-2 text-[14px] sm:text-[16px] leading-relaxed text-[var(--text)]">{program.summary}</p>
+        <h3 className="mt-1 text-[16px] md:text-[18px] lg:text-[22px] font-semibold text-[var(--text-h)]">{program.title}</h3>
+        <p className="mt-2 text-[14px] lg:text-[16px] leading-relaxed text-[var(--text)]">{program.summary}</p>
         <span className="program-link mt-3 inline-block text-[14px] font-semibold text-[var(--accent)]">
-          Read more
+          Read More
         </span>
       </div>
 
