@@ -4,9 +4,9 @@ import { submitContactForm } from '../services/contactService.js'
 import ContactHero from '../components/ContactHero.jsx'
 
 const FIELDS = [
-  { name: 'name', placeholder: 'Your name', required: true },
-  { name: 'email', placeholder: 'Email address', required: true },
-  { name: 'phone', placeholder: 'Phone number', required: false },
+  { name: 'name', placeholder: 'Your Name', required: true },
+  { name: 'email', placeholder: 'Email Address', required: true },
+  { name: 'phone', placeholder: 'Phone Number', required: false },
   { name: 'subject', placeholder: 'Subject', required: false },
 ]
 
