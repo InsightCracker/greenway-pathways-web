@@ -9,7 +9,7 @@ export default function AboutHero() {
       <div className="absolute inset-0 bg-[var(--brand-green)]/80" />
 
       <div className="relative">
-        <p className="font-display text-[36px] text-white sm:text-[44px] sm:text-[50px] pb-5">About Us</p>
+        <p className="font-display text-[36px] text-white sm:text-[44px] pb-5">About Us</p>
         <p className="mt-3 text-[15px] font-medium tracking-wide text-white/80">
           Greenway Pathways Foundation
         </p>

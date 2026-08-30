@@ -12,8 +12,8 @@ const QUICK_LINKS = [
 
 const PROGRAMMES = [
   { label: 'Education', to: '/programs#education' },
-  { label: 'Youth development', to: '/programs#youth' },
-  { label: 'Women & girls', to: '/programs#women' },
+  { label: 'Youth Development', to: '/programs#youth' },
+  { label: 'Women & Girls', to: '/programs#women' },
 ]
 
 export default function Footer() {

@@ -28,8 +28,8 @@ export default function NewsSection() {
             </svg>
         </div>
 
-        <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {NEWS.slice(0, 4).map((post, i) => (
+        <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {NEWS.slice(0, 3).map((post, i) => (
             <NewsCard key={post.slug} post={post} index={i} />
           ))}
         </div>
