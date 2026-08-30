@@ -43,7 +43,7 @@ export default function About() {
       {/* Mission */}
       <section
         ref={missionRef}
-        className="mx-auto grid gap-10 px-6 py-16 sm:grid-cols-2 sm:items-center sm:py-24"
+        className="mx-auto flex max-w-[1126px] flex-col items-center justify-center px-6 py-8 text-center sm:py-24"
       >
         <div
           className={`transition-all duration-700 ${
@@ -70,30 +70,18 @@ export default function About() {
             </svg>
           </div>
 
-          <p className="mt-6 text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px] lg:text-[22px]">
-            <strong className="text-[var(--text-h)]">
-              To design and implement innovative, inclusive, and sustainable programmes
-              that expand access to education, strengthen livelihoods, promote social
-              inclusion, build resilient communities, and improve lives through strategic
-              partnerships and evidence-based solutions.
-            </strong>{' '}
-            <br />
+          <p className="mx-auto font-bold mt-6 max-w-2.5xl text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px] lg:text-[22px]">
+            To design and implement innovative, inclusive, and sustainable programmes
+            that expand access to education, strengthen livelihoods, promote social
+            inclusion, build resilient communities, and improve lives through strategic
+            partnerships and evidence-based solutions.
+          </p>
+
+          <p className="mx-auto max-w-2.5xl text-[14px] leading-relaxed text-[var(--text)] sm:text-[16px] lg:text-[20px]">
             Our aim is to improve the quality of life of individuals and communities by
             promoting education, empowerment, sustainable development, and inclusive
             opportunities that enable people to reach their full potential.
           </p>
-        </div>
-
-        <div
-          className={`overflow-hidden rounded-xl transition-all delay-150 duration-700 ${
-            missionInView ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-          }`}
-        >
-          <img
-            src="https://images.pexels.com/photos/36753412/pexels-photo-36753412.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt=""
-            className="h-[340px] w-full object-cover sm:h-[300px] md:h-[500px] lg:h-[600px]"
-          />
         </div>
       </section>
 
