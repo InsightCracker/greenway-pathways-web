@@ -9,6 +9,8 @@ import PurposeSection from '../components/PurposeSection.jsx'
 import ValuesCarousel from '../components/ValuesCarousel.jsx'
 import NewsSection from '../components/NewsSection.jsx'
 
+import { ArrowRight } from 'lucide-react'
+
 const FEATURED_PROGRAMS = [
   {
     title: 'Education',
@@ -74,9 +76,10 @@ export default function Home() {
     <div className="mt-8 flex justify-center">
       <Link
         to="/programs"
-        className="text-[13px] font-semibold text-[var(--accent)]"
+        className="see-all group inline-flex items-center gap-1.5 text-[15px] font-semibold text-[var(--accent)]"
       >
-        See all programmes →
+        See all Programs
+        <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
       </Link>
     </div>
   </section>
