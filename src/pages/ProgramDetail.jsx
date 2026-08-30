@@ -14,9 +14,11 @@ export default function ProgramDetail() {
     <article className="text-left">
       <div className="relative h-[280px] overflow-hidden sm:h-[360px]">
         <img src={imgUrl} alt="" className="h-full w-full object-cover" />
+
         <div className="absolute inset-0 bg-[var(--brand-green)]/70" />
+
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <p className="font-display text-[36px] text-white sm:text-[44px] sm:text-[50px] pb-5">
+          <p className="font-display text-[36px] leading-[1] text-white sm:text-[44px] pt-4">
             {program.title}
           </p>
         </div>
@@ -28,12 +30,12 @@ export default function ProgramDetail() {
           className="back-link inline-flex items-center gap-2 text-[15px] font-medium text-[var(--text)] transition-colors hover:text-[var(--accent)] mb-3"
         >
           <ArrowLeft size={15} />
-          All programmes
+          All programs
         </Link>
 
         <div className="my-4 h-px bg-[var(--border)]" />
 
-        <p className="text-[17px] leading-[1.8] text-[var(--text-h)]">{program.body}</p>
+        <p className="text-[17px] leading-[1.8] text-[var(--text-h)] text-justify">{program.body}</p>
 
         <div className="mt-10 rounded-xl border border-dashed border-[var(--border)] bg-[var(--code-bg)] px-6 py-8 text-center">
           <p className="text-[13px] text-[var(--text)]">

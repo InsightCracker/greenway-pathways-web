@@ -44,7 +44,7 @@ export default function NewsArticle() {
 
         <div className="my-4 h-px bg-[var(--border)]" />
 
-        <p className="text-[17px] leading-[1.8] text-[var(--text-h)]">{post.body}</p>
+        <p className="text-[17px] leading-[1.8] text-[var(--text-h)] text-justify">{post.body}</p>
 
         <style>{`
           .back-link svg {
