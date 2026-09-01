@@ -3,13 +3,19 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx'
+import { NewsProvider } from './context/NewsContext.jsx'
+import { ProgramProvider } from './context/ProgramsContext.jsx'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <ThemeProvider>
-        <App />
+        <NewsProvider>
+          <ProgramProvider>
+            <App />
+          </ProgramProvider>
+        </NewsProvider>
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>,
