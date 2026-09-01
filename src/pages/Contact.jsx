@@ -112,7 +112,7 @@ export default function Contact() {
           <div className="rounded-2xl border border-dashed border-[var(--border)] bg-[var(--code-bg)] p-7">
             <h3 className="text-[22px] mb-3 font-semibold text-[var(--text-h)]">Office address</h3>
             <p className="text-[15px] leading-relaxed text-[var(--text)]">
-              To be added once our registered office is confirmed.
+              82 Muritala Muhammed way, Yaba, Lagos State, Nigeria.
             </p>
           </div>
         </div>
