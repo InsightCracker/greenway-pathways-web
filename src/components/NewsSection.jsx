@@ -1,8 +1,9 @@
-import { NEWS } from '../data/news.js'
+import { useNews } from '../context/NewsContext.jsx'
 import NewsCard from './NewsCard.jsx'
 import { useInView } from '../hooks/useInView.js'
 
 export default function NewsSection() {
+  const { news, loading, error } = useNews()
   const [headingRef, headingInView] = useInView()
 
   return (
@@ -29,7 +30,7 @@ export default function NewsSection() {
         </div>
 
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {NEWS.slice(0, 3).map((post, i) => (
+          {news.slice(0, 3).map((post, i) => (
             <NewsCard key={post.slug} post={post} index={i} />
           ))}
         </div>

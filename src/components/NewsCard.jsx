@@ -3,7 +3,6 @@ import { useInView } from '../hooks/useInView.js'
 
 export default function NewsCard({ post, index }) {
   const [ref, inView] = useInView()
-  const imgUrl = `https://images.pexels.com/photos/${post.image}/pexels-photo-${post.image}.jpeg?auto=compress&cs=tinysrgb&w=600`
 
   return (
     <Link
@@ -16,7 +15,7 @@ export default function NewsCard({ post, index }) {
     >
       <div className="h-44 overflow-hidden">
         <img
-          src={imgUrl}
+          src={post.image}
           alt=""
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

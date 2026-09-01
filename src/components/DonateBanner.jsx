@@ -7,7 +7,7 @@ export default function DonateBanner() {
   ]
 
   return (
-    <div className="relative mx-auto max-w-[1126px] overflow-hidden rounded-2xl bg-[var(--brand-green)] px-8 py-14 sm:px-14">
+    <div className="relative mx-auto max-w-[90%] lg:max-w-[1126px] overflow-hidden rounded-2xl bg-[var(--brand-green)] px-8 py-14 sm:px-14">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         {/* Text */}
         <div className="text-center lg:text-left">
