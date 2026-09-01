@@ -1,9 +1,11 @@
 import ProgramCard from '../components/ProgramCard.jsx'
 import ProgramsHero from '../components/ProgramsHero.jsx'
 import DonateBanner from '../components/DonateBanner.jsx'
-import { PROGRAMS } from '../data/programs.js'
+import { usePrograms } from '../context/ProgramsContext.jsx'
 
 export default function Programs() {
+  const { programs, loading, error } = usePrograms()
+
   return (
     <div className="text-left">
       <ProgramsHero />
@@ -17,7 +19,7 @@ export default function Programs() {
         </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {PROGRAMS.map((program, i) => (
+          {programs.map((program, i) => (
             <ProgramCard key={program.slug} program={program} index={i} />
           ))}
         </div>

@@ -1,38 +1,13 @@
-import { Link } from 'react-router-dom'
-import { useInView } from '../hooks/useInView.js'
-import { PROGRAMS } from '../data/programs.js'
 import Hero from '../components/Hero.jsx'
 import StatBar from '../components/StatBar.jsx'
-import ProgramCard from '../components/ProgramCard.jsx'
 import DonateBanner from '../components/DonateBanner.jsx'
 import PurposeSection from '../components/PurposeSection.jsx'
 import ValuesCarousel from '../components/ValuesCarousel.jsx'
+import ProgramSection from '../components/ProgramSection.jsx'
 import NewsSection from '../components/NewsSection.jsx'
-
 import { ArrowRight } from 'lucide-react'
 
-const FEATURED_PROGRAMS = [
-  {
-    title: 'Education',
-    description: 'Equitable access to quality, inclusive education by providing scholarships, promoting literacy, supporting teacher development, and improving schools.',
-    imageId: 28593044,
-  },
-  {
-    title: 'Youth Development',
-    description: 'Leadership, entrepreneurship, mentorship, and vocational and digital skills for young people.',
-    imageId: 8382227,
-  },
-  {
-    title: 'Women & Girls',
-    description: 'Social, educational, and economic advancement of women and girls through advocacy, skills, and enterprise development.',
-    imageId: 3869652,
-  },
-]
-
 export default function Home() {
-  const [headingRef, headingInView] = useInView()
-  const FEATURED_PROGRAMS = PROGRAMS.slice(0, 3)
-
   return (
     <>
       <Hero />
@@ -45,51 +20,13 @@ export default function Home() {
 
       <ValuesCarousel />
 
-      <div className="mx-auto px-6 py-14">
-        <section className="mt-16 text-left">
-    <div ref={headingRef} className="relative flex flex-col items-center text-center">
-      <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[45px]">
-        What we do
-      </p>
-      <svg
-        viewBox="0 0 220 20"
-        className="mt-2 h-4 w-[180px] sm:w-[220px]"
-        aria-hidden="true"
-      >
-        <path
-          d="M6 14C50 2 160 2 214 12"
-          fill="none"
-          stroke="var(--accent)"
-          strokeWidth="4"
-          strokeLinecap="round"
-          className={`underline-path ${headingInView ? 'is-drawn' : ''}`}
-        />
-      </svg>
-    </div>
+      <ProgramSection />
 
-    <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      {FEATURED_PROGRAMS.map((program, i) => (
-        <ProgramCard key={program.slug} program={program} index={i} />
-      ))}
-    </div>
+      <section className="mt-16">
+        <DonateBanner />
+      </section>
 
-    <div className="mt-8 flex justify-center">
-      <Link
-        to="/programs"
-        className="see-all group inline-flex items-center gap-1.5 text-[15px] font-semibold text-[var(--accent)]"
-      >
-        See all Programs
-        <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
-      </Link>
-    </div>
-  </section>
-
-        <section className="mt-16">
-          <DonateBanner />
-        </section>
-      </div>
-
-    <NewsSection />
+      <NewsSection />
 
       <style>{`
         .underline-path {

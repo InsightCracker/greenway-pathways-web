@@ -1,20 +1,19 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { NEWS } from '../data/news.js'
+import { useNews } from '../context/NewsContext.jsx'
 import { ArrowLeft } from 'lucide-react'
 
 export default function NewsArticle() {
   const { slug } = useParams()
-  const post = NEWS.find((p) => p.slug === slug)
+  const { news, loading, error } = useNews()
+  const post = news.find((p) => p.slug === slug)
 
   if (!post) return <Navigate to="/news" replace />
-
-  const imgUrl = `https://images.pexels.com/photos/${post.image}/pexels-photo-${post.image}.jpeg?auto=compress&cs=tinysrgb&w=1200`
 
   return (
     <article className="text-left">
       <section className="relative flex h-[280px] items-center justify-center overflow-hidden text-center sm:h-[320px]">
         <img
-          src="https://images.pexels.com/photos/6646892/pexels-photo-6646892.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          src={post.image}
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
         />

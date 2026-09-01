@@ -1,19 +1,19 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
+import { usePrograms } from '../context/ProgramsContext.jsx'
 import { PROGRAMS } from '../data/programs.js'
 import { ArrowLeft } from 'lucide-react'
 
 export default function ProgramDetail() {
   const { slug } = useParams()
-  const program = PROGRAMS.find((p) => p.slug === slug)
+  const { programs, loading, error } = usePrograms()
+  const program = programs.find((p) => p.slug === slug)
 
   if (!program) return <Navigate to="/programs" replace />
-
-  const imgUrl = `https://images.pexels.com/photos/${program.image}/pexels-photo-${program.image}.jpeg?auto=compress&cs=tinysrgb&w=1200`
 
   return (
     <article className="text-left">
       <div className="relative h-[280px] overflow-hidden sm:h-[360px]">
-        <img src={imgUrl} alt="" className="h-full w-full object-cover" />
+        <img src={program.image} alt="" className="h-full w-full object-cover" />
 
         <div className="absolute inset-0 bg-[var(--brand-green)]/70" />
 
