@@ -121,7 +121,7 @@ export default function Footer() {
               Stay updated
             </p>
             <p className="mt-4 text-[14px] leading-relaxed text-white/70 sm:text-[15px]">
-              Be first to know as our programmes launch.
+              Be first to know as our programs launch.
             </p>
             {submitted ? (
               <p className="mt-4 text-[13px] font-medium text-[var(--accent)]">
