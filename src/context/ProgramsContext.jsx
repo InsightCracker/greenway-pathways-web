@@ -31,7 +31,7 @@ export function ProgramProvider({ children }) {
       try {
         setLoading(true)
         setError(null)
-        const res = await fetch(`${API_URL}/api/programs`)
+        const res = await fetch(`${API_URL}/programs`)
         if (!res.ok) throw new Error(`Failed to load programmes (${res.status})`)
         const data = await res.json()
         if (!cancelled) setPrograms(data)
@@ -46,8 +46,6 @@ export function ProgramProvider({ children }) {
     return () => { cancelled = true }
   }, [])
 
-  // Exposed so a dashboard/admin screen can trigger a manual refetch after
-  // creating, editing, or deleting a programme, without a full page reload.
   const refetch = fetchPrograms
 
   return (
@@ -63,9 +61,6 @@ export function usePrograms() {
   return ctx
 }
 
-// For individual programme pages (e.g. /programmes/:slug). Fetches on its
-// own rather than pulling from the shared list, so a direct link to a single
-// programme page doesn't depend on the full list having loaded first.
 export function useProgram(slug) {
   const [program, setProgram] = useState(null)
   const [loading, setLoading] = useState(true)

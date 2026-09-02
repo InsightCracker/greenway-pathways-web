@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000/'
 
 const NewsContext = createContext(null)
 
@@ -16,7 +16,7 @@ export function NewsProvider({ children }) {
       try {
         setLoading(true)
         setError(null)
-        const res = await fetch(`${API_URL}/api/news`)
+        const res = await fetch(`${API_URL}/news`)
         if (!res.ok) throw new Error(`Failed to load news (${res.status})`)
         const data = await res.json()
         if (!cancelled) setNews(data)
