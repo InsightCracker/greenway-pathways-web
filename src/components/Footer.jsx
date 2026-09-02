@@ -115,37 +115,20 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Stay updated */}
+          {/* Reach us */}
           <div>
             <p className="text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)] sm:text-[18px]">
-              Stay updated
+              Reach us
             </p>
-            <p className="mt-4 text-[14px] leading-relaxed text-white/70 sm:text-[15px]">
-              Be first to know as our programs launch.
+            <p className="mt-4 text-[14px] sm:text-[15px] leading-relaxed text-white/70">
+              Have a question or want to get involved? Call or message us directly.
             </p>
-            {submitted ? (
-              <p className="mt-4 text-[13px] font-medium text-[var(--accent)]">
-                Thanks — you're on the list.
-              </p>
-            ) : (
-              <form onSubmit={handleSubmit} className="mt-4 flex gap-2">
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@email.com"
-                  className="w-full border border-white/20 bg-white/5 px-4 py-2 text-[15px] text-white placeholder:text-white/40 outline-none transition-colors focus:border-[var(--accent)]"
-                />
-                <button
-                  type="submit"
-                  aria-label="Subscribe"
-                  className="flex w-[42px] shrink-0 items-center justify-center bg-[var(--accent)] text-white transition-transform duration-300 hover:-translate-y-0.5 cursor-pointer"
-                >
-                  <FiArrowRight size={20} />
-                </button>
-              </form>
-            )}
+            <a
+              href="tel:+2347071390061"
+              className="footer-link mt-3 inline-block text-[15px] font-semibold text-white"
+            >
+              +234 707 139 0061
+            </a>
           </div>
         </div>
 
