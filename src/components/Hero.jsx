@@ -27,26 +27,25 @@ export default function Hero() {
         </p>
 
         <p className="font-display uppercase reveal reveal-2 mt-2 text-[2rem] sm:text-[40px] lg:text-[55px] font-medium leading-tight text-white sm:mt-3">
-          Pathways to education, dignity &amp; opportunity
+          Building pathways to education, empowerment, inclusion &amp; sustainable development
         </p>
 
-        <p className="reveal reveal-3 mt-3 max-w-xs text-[16px] text-white/70 sm:mt-4 sm:max-w-md sm:text-[20px]">
-          Greenway Pathways Foundation partners with communities across Nigeria to expand
-          access to education, health, and economic opportunity.
+        <p className="reveal reveal-3 mt-3 max-w-3xl text-[16px] text-white/70 sm:mt-4 sm:text-[20px]">
+          Greenway Pathways Foundation is a non-profit organization committed to improving lives by expanding opportunities, strengthening communities and supporting inclusive and sustainable development.
         </p>
         <div className="reveal reveal-4 mt-5 flex w-full flex-col gap-3 sm:mt-6 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center">
           <Link
             to="/contact"
             className="btn-pulse rounded-full bg-[var(--accent)] px-6 py-2.5 text-[14px] font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
           >
-            Donate Now
+            Partner With Us
           </Link>
 
           <Link
             to="/programs"
             className="rounded-full border border-white px-6 py-2.5 text-[14px] font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-[var(--brand-green)]"
           >
-            See Our Programs
+            Explore Our Programs
           </Link>
         </div>
       </div>
