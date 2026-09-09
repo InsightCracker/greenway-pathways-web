@@ -5,6 +5,7 @@ import PurposeSection from '../components/PurposeSection.jsx'
 import ValuesCarousel from '../components/ValuesCarousel.jsx'
 import ProgramSection from '../components/ProgramSection.jsx'
 import NewsSection from '../components/NewsSection.jsx'
+import WhoWeServeSection from '../components/Services.jsx'
 import { ArrowRight } from 'lucide-react'
 
 export default function Home() {
@@ -22,11 +23,13 @@ export default function Home() {
 
       <ProgramSection />
 
-      <section className="mt-16">
-        <DonateBanner />
-      </section>
+      <WhoWeServeSection />
 
       <NewsSection />
+
+      <section className="my-16">
+        <DonateBanner />
+      </section>
 
       <style>{`
         .underline-path {
