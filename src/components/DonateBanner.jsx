@@ -16,18 +16,18 @@ export default function DonateBanner() {
           </p>
 
           <h3 className="font-display my-3 text-[30px] leading-[1.1] text-white sm:text-[40px]">
-            Every gift opens a pathway forward
+            Help Us Create More Pathways
           </h3>
 
           <p className="mt-4 text-[15px] leading-relaxed text-white/70">
-            Greenway Pathways Foundation is just getting started, and your support helps us build our first programs in education, youth development, and women's empowerment from the ground up.
+            Your support can help expand access to education, strengthen livelihoods, empower young people and women, support vulnerable communities, and advance sustainable development.
           </p>
           
           <a
             href="/contact"
             className="donate-cta mt-7 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-7 py-3 text-[14px] font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
           >
-            DONATE NOW
+            SUPPORT OUR WORK
           </a>
         </div>
 
