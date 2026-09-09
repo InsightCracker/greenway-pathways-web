@@ -26,11 +26,11 @@ export default function Hero() {
           CREATING OPPORTUNITIES, TRANSFORMING LIVES
         </p>
 
-        <p className="font-display uppercase reveal reveal-2 mt-2 text-[2rem] sm:text-[40px] lg:text-[55px] font-medium leading-tight text-white sm:mt-3">
+        <p className="font-display uppercase reveal reveal-2 mt-2 text-[1.5rem] sm:text-[35px] lg:text-[45px] font-medium leading-tight text-white sm:mt-3">
           Building pathways to education, empowerment, inclusion &amp; sustainable development
         </p>
 
-        <p className="reveal reveal-3 mt-3 max-w-3xl text-[16px] text-white/70 sm:mt-4 sm:text-[20px]">
+        <p className="reveal reveal-3 mt-3 max-w-3xl text-[15px] text-white/70 sm:mt-4 sm:text-[18px] lg:text-[20px]">
           Greenway Pathways Foundation is a non-profit organization committed to improving lives by expanding opportunities, strengthening communities and supporting inclusive and sustainable development.
         </p>
         <div className="reveal reveal-4 mt-5 flex w-full flex-col gap-3 sm:mt-6 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center">
