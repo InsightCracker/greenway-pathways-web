@@ -10,8 +10,8 @@ export default function NewsSection() {
     <section className="px-6 py-16 sm:py-20">
       <div className="mx-auto">
         <div ref={headingRef} className="relative flex flex-col items-center text-center">
-          <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[45px]">
-            Recent News
+          <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[40px]">
+            RECENT NEWS
           </p>
           <svg
                 viewBox="0 0 220 20"

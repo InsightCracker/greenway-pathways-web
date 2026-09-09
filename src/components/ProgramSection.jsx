@@ -36,8 +36,8 @@ export default function ProgramSection() {
     <div className="mx-auto px-6 py-14">
       <section className="mt-16 text-left">
         <div ref={headingRef} className="relative flex flex-col items-center text-center">
-          <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[45px]">
-            What We Do
+          <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[40px]">
+            OUR PROGRAMS
           </p>
           <svg
             viewBox="0 0 220 20"
@@ -78,7 +78,7 @@ export default function ProgramSection() {
             to="/programs"
             className="see-all group inline-flex items-center gap-1.5 text-[15px] font-semibold text-[var(--accent)]"
           >
-            See all Programs
+            Explore All Programs
             <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
