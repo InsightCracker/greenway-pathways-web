@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import HashLink from './HashLink.jsx'
 import { FaFacebook, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { FiArrowRight } from 'react-icons/fi'
 import Logo from './Logo.jsx'
@@ -8,12 +9,14 @@ const QUICK_LINKS = [
   { label: 'About Us', to: '/about' },
   { label: 'Our Programs', to: '/programs' },
   { label: 'Contact Us', to: '/contact' },
+  { label: 'Stories / News', to: '/news' },
 ]
 
 const PROGRAMMES = [
-  { label: 'Education', to: '/programs#education' },
-  { label: 'Youth Development', to: '/programs#youth' },
-  { label: 'Women & Girls', to: '/programs#women' },
+  { label: 'Who We Are', to: '/#who-we-are' },
+  { label: 'Our Approach', to: '/#our-approach' },
+  { label: 'Who We Serve', to: '/#who-we-serve' },
+  { label: 'Patnership', to: '/#partnership' },
 ]
 
 export default function Footer() {
@@ -58,7 +61,9 @@ export default function Footer() {
             </p>
             <div className="mt-6 flex items-center gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/GreenwayPathwaysFoundation"
+                target='_blank'
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="social-icon flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/70"
               >
@@ -66,19 +71,13 @@ export default function Footer() {
               </a>
               
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/greenwaypathwaysfoundation"
+                target='_blank'
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="social-icon flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/70"
               >
                 <FaInstagram size={25} />
-              </a>
-              
-              <a
-                href="https://linkedin.com"
-                aria-label="LinkedIn"
-                className="social-icon flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/70"
-              >
-                <FaLinkedinIn size={25} />
               </a>
             </div>
           </div>
@@ -102,16 +101,26 @@ export default function Footer() {
           {/* Programmes */}
           <div>
             <p className="text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)] sm:text-[18px]">
-              Programs
+              Explore
             </p>
             <ul className="mt-4 space-y-2.5">
-              {PROGRAMMES.map((link) => (
-                <li key={link.to}>
-                  <NavLink to={link.to} className="footer-link text-[14px] text-white/75 sm:text-[15px]">
-                    {link.label}
-                  </NavLink>
-                </li>
-              ))}
+              <ul className="mt-4 space-y-2.5">
+                {PROGRAMMES.map((link) =>
+                  link.to.includes('#') ? (
+                    <li key={link.to}>
+                      <HashLink to={link.to} className="footer-link text-[14px] text-white/75 sm:text-[15px]">
+                        {link.label}
+                      </HashLink>
+                    </li>
+                  ) : (
+                    <li key={link.to}>
+                      <NavLink to={link.to} className="footer-link text-[14px] text-white/75 sm:text-[15px]">
+                        {link.label}
+                      </NavLink>
+                    </li>
+                  )
+                )}
+              </ul>
             </ul>
           </div>
 
