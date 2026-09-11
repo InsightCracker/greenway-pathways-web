@@ -6,6 +6,8 @@ import ValuesCarousel from '../components/ValuesCarousel.jsx'
 import ProgramSection from '../components/ProgramSection.jsx'
 import NewsSection from '../components/NewsSection.jsx'
 import WhoWeServeSection from '../components/Services.jsx'
+import PartnershipSection from '../components/PartnershipSection.jsx'
+import ApproachSection from '../components/Approach.jsx'
 import { ArrowRight } from 'lucide-react'
 
 export default function Home() {
@@ -15,9 +17,7 @@ export default function Home() {
 
       <PurposeSection />
 
-      <div className="mx-auto px-6 pb-25">
-        <StatBar />
-      </div>
+      <ApproachSection />
 
       <ValuesCarousel />
 
@@ -25,9 +25,15 @@ export default function Home() {
 
       <WhoWeServeSection />
 
+      <PartnershipSection />
+
+      <div className="mx-auto px-6 lg:px-0 py-10">
+        <StatBar />
+      </div>
+
       <NewsSection />
 
-      <section className="my-16">
+      <section className="my-16 px-6 lg:px-0">
         <DonateBanner />
       </section>
 

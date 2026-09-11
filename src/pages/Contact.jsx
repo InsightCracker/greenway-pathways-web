@@ -45,13 +45,14 @@ export default function Contact() {
 
             <div className="mt-8 flex items-center gap-3">
               {[
-                { Icon: FaFacebook, href: 'https://facebook.com' },
-                { Icon: FaInstagram, href: 'https://instagram.com' },
-                { Icon: FaLinkedinIn, href: 'https://youtube.com' },
+                { Icon: FaFacebook, href: 'https://www.facebook.com/GreenwayPathwaysFoundation' },
+                { Icon: FaInstagram, href: 'https://www.instagram.com/greenwaypathwaysfoundation' },
               ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
                   href={href}
+                  target='_blank'
+                  rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--code-bg)] text-[var(--text-h)] transition-colors hover:bg-[var(--accent)] hover:text-white"
                 >
                   <Icon size={16} />

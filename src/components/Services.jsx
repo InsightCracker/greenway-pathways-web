@@ -33,8 +33,8 @@ export default function WhoWeServeSection() {
   const [headingRef, headingInView] = useInView()
 
   return (
-    <section className="bg-[var(--code-bg)] px-6 py-15 sm:py-20">
-      <div className="mx-auto max-w-[85%]">
+    <section id="who-we-serve" className="bg-[var(--code-bg)] px-6 py-15 sm:py-20">
+      <div className="md:mx-auto md:max-w-[85%]">
         <div ref={headingRef} className="relative flex flex-col items-center text-center">
           <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[40px]">
             WHO WE SERVE

@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
 import { useNews } from '../context/NewsContext.jsx'
-import NewsCard from './NewsCard.jsx'
 import { useInView } from '../hooks/useInView.js'
+import { ArrowRight } from 'lucide-react'
+import NewsCard from './NewsCard.jsx'
 
 export default function NewsSection() {
   const { news, loading, error } = useNews()
@@ -11,7 +13,7 @@ export default function NewsSection() {
       <div className="mx-auto">
         <div ref={headingRef} className="relative flex flex-col items-center text-center">
           <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[40px]">
-            RECENT NEWS
+            STORIES/NEWS
           </p>
           <svg
                 viewBox="0 0 220 20"
@@ -35,6 +37,16 @@ export default function NewsSection() {
           ))}
         </div>
       </div>
+
+      <div className="mt-8 flex justify-center">
+          <Link
+            to="/news"
+            className="see-all group inline-flex items-center gap-1.5 text-[15px] font-semibold text-[var(--accent)]"
+          >
+            View All Stories
+            <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+        </div>
 
       <style>{`
         .underline-path {

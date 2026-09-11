@@ -6,7 +6,7 @@ export default function PurposeSection() {
   const [headingRef, headingInView] = useInView()
 
   return (
-    <section className="px-6 py-15 sm:py-28">
+    <section id="who-we-are" className="px-6 py-15 md:py-20">
       <div className="mx-auto flex max-w-[100%] lg:max-w-[80%] flex-col items-center text-center">
         <div ref={headingRef} className="relative flex flex-col items-center text-center">
           <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[40px]">
