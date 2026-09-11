@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import ScrollToHash from '../components/ScrollToHash.jsx'
 import MainLayout from '../layouts/MainLayout.jsx'
 import Home from '../pages/Home.jsx'
 import About from '../pages/About.jsx'
@@ -10,16 +11,19 @@ import NewsArticle from '../pages/NewsArticle.jsx'
 
 export default function AppRoutes() {
   return (
-    <Routes>
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/programs" element={<Programs />} />
-        <Route path="/programs/:slug" element={<ProgramDetail />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/news/:slug" element={<NewsArticle />} />
-      </Route>
-    </Routes>
+    <>
+      <ScrollToHash />
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/programs/:slug" element={<ProgramDetail />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news/:slug" element={<NewsArticle />} />
+        </Route>
+      </Routes>
+    </>
   )
 }
