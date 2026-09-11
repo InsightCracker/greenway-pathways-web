@@ -38,7 +38,7 @@ export default function ApproachSection() {
   const [headingRef, headingInView] = useInView()
 
   return (
-    <section id="our-approach" className="bg-[var(--code-bg)] px-6 py-6 md:py-12">
+    <section id="our-approach" className="bg-[var(--code-bg)] px-6 py-12 md:py-15">
       <div className="mx-auto max-w-[900px]">
          <div ref={headingRef} className="relative flex flex-col items-center text-center">
           <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[40px]">
