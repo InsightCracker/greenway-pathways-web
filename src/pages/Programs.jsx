@@ -11,9 +11,9 @@ export default function Programs() {
       <ProgramsHero />
 
       <div className="mx-auto max-w-85% px-6 py-16 sm:py-20">
-        <h2 className="font-display mt-3 text-[2.5rem] text-center leading-[1.1] text-[var(--text-h)] ">
+        <h3 className="font-display my-3 text-[2rem] md:text-[40px] text-center leading-[1.1] text-[var(--text-h)] ">
           Our Focus Areas
-        </h2>
+        </h3>
         <p className="mt-5 text-[15px] lg:text-[18px] text-center leading-relaxed text-[var(--text)]">
           Discover the key areas where we're creating opportunities and driving meaningful change.
         </p>
