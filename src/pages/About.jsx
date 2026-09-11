@@ -5,12 +5,12 @@ import AboutHero from '../components/AboutHero.jsx'
 
 const OBJECTS = [
   {
-    title: 'Education',
+    title: 'Education & Learning',
     body: 'Promote equitable access to quality, inclusive, and lifelong education through scholarships, educational support, literacy programmes, teacher development, school improvement initiatives, digital learning, curriculum development, and educational research.',
   },
   {
     title: 'Youth Development',
-    body: 'Empower young people through leadership development, entrepreneurship, mentorship, innovation, vocational education, employability skills, civic engagement, digital skills, and life skills programmes.',
+    body: 'Empower young people through leadership development, entrepreneurship, mentorship, innovation, vocational education, employability skills, digital skills, and life skills programmes.'
   },
   {
     title: "Women and Girls' Empowerment",
@@ -30,54 +30,86 @@ const OBJECTS = [
   },
 ]
 
+/** Heading with the hand-drawn underline used across About sections. */
+function SectionHeading({ title, inView, align = 'center' }) {
+  const alignClass = align === 'left' ? 'items-center sm:items-start sm:text-left' : 'items-center text-center'
+
+  return (
+    <div className={`relative mb-6 flex flex-col ${alignClass}`}>
+      <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[40px]">
+        {title}
+      </p>
+      <svg viewBox="0 0 220 20" className="mt-2 h-4 w-[180px] sm:w-[220px]" aria-hidden="true">
+        <path
+          d="M6 14C50 2 160 2 214 12"
+          fill="none"
+          stroke="var(--accent)"
+          strokeWidth="4"
+          strokeLinecap="round"
+          className={`underline-path ${inView ? 'is-drawn' : ''}`}
+        />
+      </svg>
+    </div>
+  )
+}
+
 export default function About() {
-  const [visionRef, visionInView] = useInView()
-  const [missionRef, missionInView] = useInView()
-  const [headingRef, headingInView] = useInView()
+  const [aimRef, aimInView] = useInView()
+  const [aimHeadingRef, aimHeadingInView] = useInView()
+
+  const [visionMissionRef, visionMissionInView] = useInView()
+
+  const [objectivesHeadingRef, objectivesHeadingInView] = useInView()
+
   const { openId, toggle } = useAccordion()
 
   return (
     <div className="text-left">
       <AboutHero />
-      
-      {/* Mission */}
+
+      {/* Who We Are */}
       <section
-        ref={missionRef}
-        className="mx-auto flex max-w-[1126px] flex-col items-center justify-center px-6 py-8 text-center sm:py-24"
+  ref={aimRef}
+  className="mx-auto w-[100%] flex flex-col items-center justify-center px-6 py-16 text-center md:py-24"
+>
+  <div
+    className={`w-full space-y-6 transition-all duration-700 ${
+      aimInView ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+    }`}
+  >
+    <div ref={aimHeadingRef}>
+      <SectionHeading title="WHO WE ARE" inView={aimHeadingInView} />
+    </div>
+
+    <div className="mx-auto max-w-[85%] text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px] lg:text-[22px]">
+      Greenway Pathways Foundation is a non-profit organisation committed to improving the quality of life of individuals and communities by promoting education, empowerment, sustainable development and inclusive opportunities.
+    </div>
+
+    <div className="mx-auto max-w-[85%] text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px] lg:text-[22px]">
+      We design and implement innovative, inclusive and sustainable programmes that expand access to education, strengthen livelihoods, promote social inclusion, build resilient communities and improve lives.
+    </div>
+
+    <div className="mx-auto max-w-[85%] text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px] lg:text-[22px]">
+      Our work is guided by strategic partnerships, community participation and evidence-based solutions, with a commitment to creating opportunities that enable individuals and communities to reach their full potential.
+    </div>
+  </div>
+</section>
+
+      {/* Aim */}
+      <section
+        ref={aimRef}
+        className="bg-[var(--code-bg)] mx-auto flex flex-col items-center justify-center px-6 py-16 text-center md:py-24"
       >
         <div
           className={`transition-all duration-700 ${
-            missionInView ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+            aimInView ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
           }`}
         >
-          <div ref={headingRef} className="relative flex flex-col items-center text-center mb-6">
-            <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[45px]">
-              Mission
-            </p>
-            <svg
-              viewBox="0 0 220 20"
-              className="mt-2 h-4 w-[180px] sm:w-[220px]"
-              aria-hidden="true"
-            >
-              <path
-                d="M6 14C50 2 160 2 214 12"
-                fill="none"
-                stroke="var(--accent)"
-                strokeWidth="4"
-                strokeLinecap="round"
-                className={`underline-path ${headingInView ? 'is-drawn' : ''}`}
-              />
-            </svg>
+          <div ref={aimHeadingRef}>
+            <SectionHeading title="AIM" inView={aimHeadingInView} />
           </div>
 
-          <p className="mx-auto font-bold mt-6 max-w-2.5xl text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px] lg:text-[22px]">
-            To design and implement innovative, inclusive, and sustainable programmes
-            that expand access to education, strengthen livelihoods, promote social
-            inclusion, build resilient communities, and improve lives through strategic
-            partnerships and evidence-based solutions.
-          </p>
-
-          <p className="mx-auto max-w-2.5xl text-[14px] leading-relaxed text-[var(--text)] sm:text-[16px] lg:text-[20px]">
+          <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px] lg:text-[22px]">
             Our aim is to improve the quality of life of individuals and communities by
             promoting education, empowerment, sustainable development, and inclusive
             opportunities that enable people to reach their full potential.
@@ -85,71 +117,141 @@ export default function About() {
         </div>
       </section>
 
-      {/* Vision */}
-      <section
-        ref={visionRef}
-        className="mx-auto flex max-w-[1126px] flex-col items-center justify-center px-6 py-16 text-center sm:py-24"
-      >
+      {/* Vision & Mission */}
+      <section ref={visionMissionRef} className="px-6 py-16 sm:py-24">
         <div
-          className={`transition-all duration-700 ${
-            visionInView ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+          className={`mx-auto max-w-[1126px] transition-all duration-700 ${
+            visionMissionInView ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
           }`}
         >
-          <div ref={headingRef} className="relative flex flex-col items-center text-center mb-6">
-            <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[45px]">
-              Vision
-            </p>
-            <svg
-              viewBox="0 0 220 20"
-              className="mt-2 h-4 w-[180px] sm:w-[220px]"
-              aria-hidden="true"
-            >
-              <path
-                d="M6 14C50 2 160 2 214 12"
-                fill="none"
-                stroke="var(--accent)"
-                strokeWidth="4"
-                strokeLinecap="round"
-                className={`underline-path ${headingInView ? 'is-drawn' : ''}`}
-              />
-            </svg>
-          </div>
+          <div className="relative grid grid-cols-1 gap-10 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch lg:gap-0">
 
-          <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px] lg:text-[22px]">
-            To be a leading non-profit organisation creating pathways to opportunities that
-            empower individuals, transform communities, and advance sustainable development
-            across Africa and beyond.
-          </p>
-        </div>
-      </section>
-
-      {/* Objects accordion */}
-      <section className="bg-[var(--code-bg)] px-6 py-16 sm:py-20">
-        <div className="mx-auto grid max-w-[1126px] gap-10 sm:grid-cols-[1fr_1.4fr] sm:items-start">
-          <div>
-            <div ref={headingRef} className="relative flex flex-col items-center text-center sm:items-left sm:text-left mb-6">
-              <p className="font-display text-[28px] font-semibold text-[var(--text-h)] sm:text-[40px]">
-                Objectives
+            {/* Vision — the horizon */}
+            <div className="flex flex-col justify-center rounded-2xl border border-[var(--text-h)]/15 px-8 py-10 sm:px-10 sm:py-12">
+              <h4 className="font-display text-[24px] font-semibold text-[var(--text-h)] sm:text-[30px] mb-3">
+                Vision
+              </h4>
+              <p className="text-[15px] leading-relaxed text-[var(--text)] sm:text-[16px] md:text-[18px]">
+                To be a leading non-profit organisation creating pathways to opportunities
+                that empower individuals, transform communities, and advance sustainable
+                development across Africa and beyond.
               </p>
-              <svg
-                viewBox="0 0 220 20"
-                className="mt-2 h-4 w-[180px] sm:w-[220px]"
-                aria-hidden="true"
-              >
+            </div>
+
+            {/* Connecting path */}
+            <div className="relative flex items-center justify-center py-2 lg:w-[100px] md:py-0 md:px-2">
+              {/* desktop: horizontal */}
+              <svg viewBox="0 0 100 40" className="hidden h-10 w-[100px] lg:block" aria-hidden="true">
+                <circle cx="6" cy="20" r="4" fill="var(--text-h)" opacity="0.4" />
                 <path
-                  d="M6 14C50 2 160 2 214 12"
+                  d="M12 20 H88"
                   fill="none"
-                  stroke="var(--accent)"
-                  strokeWidth="4"
+                  stroke="var(--text-h)"
+                  strokeOpacity="0.25"
+                  strokeWidth="2"
+                  strokeDasharray="1 7"
                   strokeLinecap="round"
-                  className={`underline-path ${headingInView ? 'is-drawn' : ''}`}
+                />
+                <circle
+                  cx="6"
+                  cy="20"
+                  r="3.5"
+                  fill="var(--accent)"
+                  className={`journey-dot ${visionMissionInView ? 'is-traveling' : ''}`}
+                />
+                <path
+                  d="M84 15 L92 20 L84 25"
+                  fill="none"
+                  stroke="var(--text-h)"
+                  strokeOpacity="0.4"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+
+              {/* mobile: vertical */}
+              <svg viewBox="0 0 40 60" className="h-14 w-10 lg:hidden" aria-hidden="true">
+                <circle cx="20" cy="6" r="4" fill="var(--text-h)" opacity="0.4" />
+                <path
+                  d="M20 12 V48"
+                  fill="none"
+                  stroke="var(--text-h)"
+                  strokeOpacity="0.25"
+                  strokeWidth="2"
+                  strokeDasharray="1 7"
+                  strokeLinecap="round"
+                />
+                <circle
+                  cx="20"
+                  cy="6"
+                  r="3.5"
+                  fill="var(--accent)"
+                  className={`journey-dot-v ${visionMissionInView ? 'is-traveling' : ''}`}
+                />
+                <path
+                  d="M15 44 L20 52 L25 44"
+                  fill="none"
+                  stroke="var(--text-h)"
+                  strokeOpacity="0.4"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
-            
-            <p className="mt-4 text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px] lg:text-[20px]">
-              Six of the seventeen commitments set out in our founding Constitution, guiding
-              every programme we build as we grow.
+
+            {/* Mission */}
+            <div
+              className="bg-[var(--code-bg)] flex flex-col justify-center rounded-2xl px-8 py-10 sm:px-10 sm:py-12"
+            >
+              <h4 className="font-display text-[24px] font-semibold text-[var(--text-h)] sm:text-[30px] mb-3">
+                Mission
+              </h4>
+              <p className="text-[15px] leading-relaxed text-[var(--text)] sm:text-[16px] md:text-[18px]">
+                To design and implement innovative, inclusive, and sustainable programmes
+                that expand access to education, strengthen livelihoods, promote social
+                inclusion, build resilient communities, and improve lives through
+                strategic partnerships and evidence-based solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <style>{`
+          @keyframes travel-x {
+            from { transform: translateX(0); }
+            to { transform: translateX(76px); }
+          }
+          @keyframes travel-y {
+            from { transform: translateY(0); }
+            to { transform: translateY(38px); }
+          }
+          .journey-dot.is-traveling {
+            animation: travel-x 1.1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+          }
+          .journey-dot-v.is-traveling {
+            animation: travel-y 1.1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .journey-dot.is-traveling,
+            .journey-dot-v.is-traveling {
+              animation: none;
+            }
+          }
+        `}</style>
+      </section>
+
+      {/* Objectives */}
+      <section className="bg-[var(--code-bg)] px-6 py-16 sm:py-20">
+        <div className="mx-auto grid max-w-[1126px] gap-10 sm:grid-cols-[1fr_1.4fr] sm:items-start">
+          <div>
+            <div ref={objectivesHeadingRef}>
+              <SectionHeading title="Objectives" inView={objectivesHeadingInView} align="left" />
+            </div>
+
+            <p className="mt-4 text-[15px] leading-relaxed text-[var(--text)] text-center sm:text-left sm:text-[18px] lg:text-[20px]">
+              Our constitutional objects guide focused programmes that address interconnected development challenges and create meaningful, sustainable opportunities.
             </p>
           </div>
 
@@ -161,7 +263,9 @@ export default function About() {
                   onClick={() => toggle(i)}
                   className="flex w-full items-center justify-between gap-4 py-5 text-left"
                 >
-                  <span className="text-[15px] font-medium text-[var(--text-h)] sm:text-[18px] lg:text-[22px]">{obj.title}</span>
+                  <span className="text-[15px] font-medium text-[var(--text-h)] sm:text-[18px] lg:text-[22px]">
+                    {obj.title}
+                  </span>
                   <ChevronDown
                     size={18}
                     className={`shrink-0 text-[var(--accent)] transition-transform duration-300 ${
@@ -175,7 +279,9 @@ export default function About() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px]">{obj.body}</p>
+                    <p className="text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px]">
+                      {obj.body}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -190,16 +296,15 @@ export default function About() {
           Board of Trustees
         </h2>
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px]">
-          Per Article 18 of our Constitution, the Board consists of five to eleven Trustees
-          providing strategic leadership and governance oversight. Our founding Board is currently being constituted.
+          Profiles will be published following the formal constitution and announcement of the Foundation's Board of Trustees.
         </p>
-        
+
         <div className="coming-soon relative mt-8 overflow-hidden rounded-xl border-2 border-dashed border-[var(--accent)] bg-[var(--code-bg)] px-6 py-10 text-center">
           <div className="flex justify-center gap-3">
             {[0, 1, 2].map((i) => (
               <div
                 key={i}
-                className="avatar-pulse flex h-12 w-12 items-center justify-center rounded-full border-2 border-dashed border-[var(--accent)] mb-4"
+                className="avatar-pulse mb-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-dashed border-[var(--accent)]"
                 style={{ animationDelay: `${i * 0.3}s` }}
               >
                 <svg viewBox="0 0 24 24" className="h-5 w-5 text-[var(--accent)]" fill="currentColor" aria-hidden="true">
@@ -212,9 +317,6 @@ export default function About() {
 
           <p className="shimmer-text mt-5 text-[15px] font-medium text-[var(--text-h)] sm:text-[18px]">
             Trustee profiles coming soon
-          </p>
-          <p className="mt-1 text-[15px] text-[var(--text)] sm:text-[18px]">
-            Check back as our founding Board is appointed and announced.
           </p>
 
           <style>{`
