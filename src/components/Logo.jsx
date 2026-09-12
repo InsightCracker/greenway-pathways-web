@@ -13,10 +13,10 @@ export default function Logo({ variant = 'full', className = '' }) {
     <div className={`flex items-center gap-2.5 ${className}`}>
       {mark}
       <span className="flex flex-col leading-none">
-        <span className="text-[15px] font-semibold tracking-tight text-[var(--text-h)]">
+        <span className="text-[15px] font-semibold tracking-tight text-[var(--accent)]">
           Greenway
         </span>
-        <span className="text-[10px] font-semibold tracking-[0.12em] text-[var(--accent)]">
+        <span className="text-[10px] font-semibold tracking-[0.12em] text-[var(--text-h)]">
           PATHWAYS FOUNDATION
         </span>
       </span>
