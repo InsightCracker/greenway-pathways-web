@@ -61,7 +61,7 @@ export default function Footer() {
             </p>
             <div className="mt-6 flex items-center gap-4">
               <a
-                href="https://www.facebook.com/GreenwayPathwaysFoundation"
+                href="https://www.facebook.com/share/19UiRjbCak/"
                 target='_blank'
                 rel="noopener noreferrer"
                 aria-label="Facebook"
