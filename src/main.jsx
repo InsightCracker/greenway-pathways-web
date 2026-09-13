@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx'
 import { NewsProvider } from './context/NewsContext.jsx'
 import { ProgramProvider } from './context/ProgramsContext.jsx'
+import { FeaturedProjectProvider } from './context/FeaturedProjectsContext.jsx'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
@@ -13,7 +14,9 @@ createRoot(document.getElementById('root')).render(
       <ThemeProvider>
         <NewsProvider>
           <ProgramProvider>
-            <App />
+            <FeaturedProjectProvider>
+              <App />
+            </FeaturedProjectProvider>
           </ProgramProvider>
         </NewsProvider>
       </ThemeProvider>
