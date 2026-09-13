@@ -17,7 +17,6 @@ export function FeaturedProjectProvider({ children }) {
       if (!res.ok) throw new Error(`Failed to load projects (${res.status})`)
       const data = await res.json()
       setFeaturedProjects(data)
-      console.log(data)
     } catch (err) {
       setError(err.message)
     } finally {
