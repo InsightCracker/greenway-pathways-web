@@ -1,10 +1,10 @@
 export default function DonateBanner() {
   const photos = [
-    { id: 28593044, className: 'top-0 left-6 h-32 w-32 sm:h-40 sm:w-40 rotate-[-6deg] z-30' },
-    { id: 8382227, className: 'top-10 left-32 h-28 w-28 sm:h-36 sm:w-36 rotate-[4deg] z-20' },
-    { id: 3869652, className: 'top-28 left-2 h-24 w-24 sm:h-32 sm:w-32 rotate-[8deg] z-10' },
-    { id: 36753412, className: 'top-32 left-40 h-32 w-32 sm:h-44 sm:w-44 rotate-[-3deg] z-20' },
-  ]
+  { src: '/images/IMG_5302.JPG.jpeg', className: 'top-0 left-6 h-32 w-32 sm:h-40 sm:w-40 rotate-[-6deg] z-30' },
+  { src: '/images/IMG_5304.JPG.jpeg', className: 'top-10 left-32 h-28 w-28 sm:h-36 sm:w-36 rotate-[4deg] z-20' },
+  { src: '/images/IMG_5316.JPG.jpeg', className: 'top-28 left-2 h-24 w-24 sm:h-32 sm:w-32 rotate-[8deg] z-10' },
+  { src: '/images/IMG_5309.JPG.jpeg', className: 'top-32 left-40 h-32 w-32 sm:h-44 sm:w-44 rotate-[-3deg] z-20' },
+]
 
   return (
     <div className="relative mx-auto lg:max-w-[1126px] overflow-hidden rounded-2xl bg-[var(--brand-green)] px-8 py-14 sm:px-14">
@@ -35,8 +35,8 @@ export default function DonateBanner() {
         <div className="relative hidden h-[280px] lg:block">
           {photos.map((p, i) => (
             <img
-              key={p.id}
-              src={`https://images.pexels.com/photos/${p.id}/pexels-photo-${p.id}.jpeg?auto=compress&cs=tinysrgb&w=400`}
+              key={p.src}
+              src={p.src}
               alt=""
               loading="lazy"
               className={`photo-float absolute rounded-2xl object-cover shadow-lg ring-4 ring-[var(--brand-green)] ${p.className}`}
