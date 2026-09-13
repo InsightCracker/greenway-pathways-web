@@ -2,7 +2,7 @@ export default function ContactHero() {
   return (
     <section className="relative flex h-[280px] items-center justify-center overflow-hidden text-center sm:h-[320px]">
       <img
-        src="https://images.pexels.com/photos/6646892/pexels-photo-6646892.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        src="logo.png"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-[var(--brand-green)]/80" />

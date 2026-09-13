@@ -2,8 +2,7 @@ export default function ProjectsHero() {
   return (
     <section className="relative flex h-[280px] items-center justify-center overflow-hidden text-center sm:h-[320px]">
       <img
-        src="https://images.pexels.com/photos/5029929/pexels-photo-5029929.jpeg?auto=compress&cs=tinysrgb&w=1600"
-        alt=""
+        src="/images/IMG_5302.JPG.jpeg"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-[var(--brand-green)]/80" />
