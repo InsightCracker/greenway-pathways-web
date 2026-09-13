@@ -2,7 +2,7 @@ const STATS = [
   { value: '2026', label: 'Founded' },
   { value: '17', label: 'Focus areas' },
   { value: '8', label: 'Core values' },
-  { value: '5-11', label: 'Board of Trustees' },
+  { value: '2', label: 'Partnerships' },
 ]
 
 export default function StatBar() {
