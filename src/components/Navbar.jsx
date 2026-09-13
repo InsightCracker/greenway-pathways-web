@@ -25,7 +25,7 @@ export default function Navbar() {
   }, [])
 
   const linkClass = ({ isActive }) =>
-    `nav-link relative sm:text-[12px] lg:text-[15px] font-medium transition-colors ${
+    `nav-link relative sm:text-[11px] lg:text-[15px] font-medium transition-colors ${
       isActive ? 'text-[var(--text-h)] is-active' : 'text-[var(--text)] hover:text-[var(--text-h)]'
     }`
 
