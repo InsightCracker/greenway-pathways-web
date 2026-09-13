@@ -16,7 +16,7 @@ export default function FeaturedProjectDetail() {
 
   const project = featuredProjects.find((p) => p.slug === slug)
 
-  if (!project) return <Navigate to="/projects" replace />
+  if (!project) return <Navigate to="/featured-projects" replace />
 
   return (
     <article className="text-left">
@@ -37,7 +37,7 @@ export default function FeaturedProjectDetail() {
 
       <div className="mx-auto max-w-2xl px-6 py-14">
         <Link
-          to="/projects"
+          to="/featured-projects"
           className="back-link mb-3 inline-flex items-center gap-2 text-[15px] font-medium text-[var(--text)] transition-colors hover:text-[var(--accent)]"
         >
           <ArrowLeft size={15} />
