@@ -8,6 +8,7 @@ import Logo from './Logo.jsx'
 const QUICK_LINKS = [
   { label: 'About Us', to: '/about' },
   { label: 'Our Programs', to: '/programs' },
+  { label: 'Featured Projects', to: '/featured-projects' },
   { label: 'Contact Us', to: '/contact' },
   { label: 'Stories / News', to: '/news' },
 ]
@@ -17,6 +18,7 @@ const PROGRAMMES = [
   { label: 'Our Approach', to: '/#our-approach' },
   { label: 'Who We Serve', to: '/#who-we-serve' },
   { label: 'Patnership', to: '/#partnership' },
+  { label: 'Donate', to: '/donate' },
 ]
 
 export default function Footer() {
