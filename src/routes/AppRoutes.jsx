@@ -8,6 +8,9 @@ import ProgramDetail from '../pages/ProgramDetail.jsx'
 import Contact from '../pages/Contact.jsx'
 import News from '../pages/News.jsx'
 import NewsArticle from '../pages/NewsArticle.jsx'
+import Donate from '../pages/Donate.jsx'
+import FeaturedProjects from '../pages/FeaturedProjects.jsx'
+import FeaturedProjectDetail from '../pages/FeaturedProjectDetail.jsx'
 
 export default function AppRoutes() {
   return (
@@ -22,6 +25,9 @@ export default function AppRoutes() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/:slug" element={<NewsArticle />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/featured-projects" element={<FeaturedProjects />} />
+          <Route path="/featured-projects/:slug" element={<FeaturedProjectDetail />} />
         </Route>
       </Routes>
     </>
