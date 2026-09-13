@@ -247,7 +247,7 @@ export default function About() {
         <div className="mx-auto grid max-w-[1126px] gap-10 sm:grid-cols-[1fr_1.4fr] sm:items-start">
           <div>
             <div ref={objectivesHeadingRef}>
-              <SectionHeading title="Objectives" inView={objectivesHeadingInView} align="left" />
+              <SectionHeading title="OUR MANDATE" inView={objectivesHeadingInView} align="left" />
             </div>
 
             <p className="mt-4 text-[15px] leading-relaxed text-[var(--text)] text-center sm:text-left sm:text-[18px] lg:text-[20px]">

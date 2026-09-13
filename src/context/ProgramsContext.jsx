@@ -14,7 +14,7 @@ export function ProgramProvider({ children }) {
       setLoading(true)
       setError(null)
       const res = await fetch(`${API_URL}/api/programs`)
-      if (!res.ok) throw new Error(`Failed to load programmes (${res.status})`)
+      if (!res.ok) throw new Error(`Failed to load programs (${res.status})`)
       const data = await res.json()
       setPrograms(data)
     } catch (err) {
@@ -25,31 +25,11 @@ export function ProgramProvider({ children }) {
   }, [])
 
   useEffect(() => {
-    let cancelled = false
-
-    async function run() {
-      try {
-        setLoading(true)
-        setError(null)
-        const res = await fetch(`${API_URL}/programs`)
-        if (!res.ok) throw new Error(`Failed to load programmes (${res.status})`)
-        const data = await res.json()
-        if (!cancelled) setPrograms(data)
-      } catch (err) {
-        if (!cancelled) setError(err.message)
-      } finally {
-        if (!cancelled) setLoading(false)
-      }
-    }
-
-    run()
-    return () => { cancelled = true }
-  }, [])
-
-  const refetch = fetchPrograms
+    fetchPrograms()
+  }, [fetchPrograms])
 
   return (
-    <ProgramContext.Provider value={{ programs, loading, error, refetch }}>
+    <ProgramContext.Provider value={{ programs, loading, error, refetch: fetchPrograms }}>
       {children}
     </ProgramContext.Provider>
   )
