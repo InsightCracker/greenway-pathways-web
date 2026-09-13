@@ -24,7 +24,7 @@ export default function DonateBanner() {
           </p>
           
           <a
-            href="/contact"
+            href="/donate"
             className="donate-cta mt-7 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-7 py-3 text-[14px] font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
           >
             SUPPORT OUR WORK
