@@ -10,7 +10,7 @@ const OBJECTS = [
   },
   {
     title: 'Youth Development',
-    body: 'Empower young people through leadership development, entrepreneurship, mentorship, innovation, vocational education, employability skills, digital skills, and life skills programmes.'
+    body: 'Empower young people through leadership development, entrepreneurship, mentorship, innovation, vocational education, employability skills, digital skills, and life skills programmes.',
   },
   {
     title: "Women and Girls' Empowerment",
@@ -21,13 +21,64 @@ const OBJECTS = [
     body: 'Promote sustainable community development by supporting initiatives that enhance livelihoods, strengthen local institutions, foster community participation, and promote social cohesion.',
   },
   {
+    title: 'Humanitarian Assistance',
+    body: 'Provide humanitarian relief, emergency assistance, rehabilitation, and recovery support to vulnerable individuals and communities affected by poverty, disasters, conflict, displacement, epidemics, or other emergencies.',
+  },
+  {
     title: 'Health and Well-being',
     body: 'Promote public health, mental health, nutrition, sanitation, hygiene, disease prevention, maternal and child health, health education, and access to quality healthcare through awareness campaigns, partnerships, and community-based interventions.',
+  },
+  {
+    title: 'Economic Empowerment',
+    body: 'Reduce poverty through entrepreneurship development, vocational skills training, financial literacy, livelihood support, cooperative development, business incubation, access to markets, and income-generating initiatives.',
   },
   {
     title: 'Environmental Sustainability',
     body: 'Promote environmental protection, climate resilience, biodiversity conservation, renewable energy, sustainable agriculture, afforestation, waste management, environmental education, and responsible stewardship of natural resources.',
   },
+  {
+    title: 'Child Development and Protection',
+    body: 'Promote the welfare, protection, education, participation, and holistic development of children while supporting initiatives that safeguard children from abuse, neglect, exploitation, violence, and harmful practices.',
+  },
+  {
+    title: 'Inclusion of Vulnerable Groups',
+    body: 'Promote the inclusion, empowerment, protection, and welfare of persons with disabilities, older persons, internally displaced persons, refugees, widows, orphans, and other vulnerable or marginalised populations.',
+  },
+  {
+    title: 'Innovation and Knowledge Development',
+    body: 'Undertake research, policy analysis, monitoring and evaluation, data collection, innovation, knowledge management, publications, and evidence generation to improve development outcomes and inform public policy.',
+  },
+  {
+    title: 'Capacity Development',
+    body: 'Provide training, coaching, mentoring, technical assistance, institutional strengthening, organisational development, and professional development services for individuals, communities, civil society organisations, educational institutions, public institutions, and private organisations.',
+  },
+  {
+    title: 'Good Governance and Civic Participation',
+    body: 'Promote transparency, accountability, ethical leadership, civic education, peacebuilding, social justice, human rights, democratic participation, and responsible citizenship through lawful and non-partisan initiatives.',
+  },
+  {
+    title: 'Technology and Digital Inclusion',
+    body: 'Promote digital literacy, innovation, responsible technology use, digital inclusion, and equitable access to information and communication technologies that support education, livelihoods, and community development.',
+  },
+  {
+    title: 'Partnerships',
+    body: "Establish and strengthen partnerships with governments, development agencies, donor organisations, academic institutions, corporate organisations, civil society organisations, community groups, traditional institutions, and international partners in furtherance of the Foundation's objects.",
+  },
+  {
+    title: 'Sustainable Development',
+    body: 'Contribute to the achievement of national development priorities, the Sustainable Development Goals (SDGs), and other lawful development frameworks through collaborative programmes and strategic interventions.',
+  },
+  {
+    title: 'General Charitable Purposes',
+    body: "Undertake any other lawful charitable activities that are incidental or conducive to achieving the Foundation's vision, mission, and objects.",
+  },
+]
+
+const TRUSTEES = [
+  { name: 'Rosemary O.O', role: 'Trustee', image: '/images/trustees/trustee-3.jpeg' },
+  { name: 'Mercy I.O', role: 'Trustee', image: '/images/trustees/trustee-1.jpeg' },
+  { name: 'L. Okunrobo', role: 'Trustee', image: '/images/trustees/trustee-2.jpeg' },
+  { name: 'Princess I.O', role: 'Trustee', image: '/images/trustees/trustee-4.jpeg' },
 ]
 
 /** Heading with the hand-drawn underline used across About sections. */
@@ -296,76 +347,24 @@ export default function About() {
           Board of Trustees
         </h2>
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px]">
-          Profiles will be published following the formal constitution and announcement of the Foundation's Board of Trustees.
+          Meet the Board of Trustees of Greenway Pathways Foundation.
         </p>
 
-        <div className="coming-soon relative mt-8 overflow-hidden rounded-xl border-2 border-dashed border-[var(--accent)] bg-[var(--code-bg)] px-6 py-10 text-center">
-          <div className="flex justify-center gap-3">
-            {[0, 1, 2].map((i) => (
-              <div
-                key={i}
-                className="avatar-pulse mb-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-dashed border-[var(--accent)]"
-                style={{ animationDelay: `${i * 0.3}s` }}
-              >
-                <svg viewBox="0 0 24 24" className="h-5 w-5 text-[var(--accent)]" fill="currentColor" aria-hidden="true">
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" />
-                </svg>
+        <div className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-4">
+          {TRUSTEES.map((trustee, i) => (
+            <div key={i} className="flex flex-col items-center text-center">
+              <div className="h-20 w-20 overflow-hidden rounded-full border-2 border-[var(--accent)] md:h-28 md:w-28">
+                <img
+                  src={trustee.image}
+                  alt={trustee.name}
+                  className="h-full w-full object-cover"
+                />
               </div>
-            ))}
-          </div>
-
-          <p className="shimmer-text mt-5 text-[15px] font-medium text-[var(--text-h)] sm:text-[18px]">
-            Trustee profiles coming soon
-          </p>
-
-          <style>{`
-            .coming-soon {
-              animation: border-travel 2.5s linear infinite;
-            }
-            @keyframes border-travel {
-              to { border-color: var(--accent); background-position: 100% 0; }
-            }
-
-            .avatar-pulse {
-              animation: avatar-pulse 2s ease-in-out infinite;
-            }
-            @keyframes avatar-pulse {
-              0%, 100% { transform: scale(1); opacity: 0.6; }
-              50% { transform: scale(1.08); opacity: 1; }
-            }
-
-            .shimmer-text {
-              background: linear-gradient(
-                90deg,
-                var(--text-h) 0%,
-                var(--text-h) 40%,
-                var(--accent) 50%,
-                var(--text-h) 60%,
-                var(--text-h) 100%
-              );
-              background-size: 200% 100%;
-              -webkit-background-clip: text;
-              background-clip: text;
-              color: transparent;
-              animation: shimmer 3s ease-in-out infinite;
-            }
-            @keyframes shimmer {
-              0% { background-position: 200% 0; }
-              100% { background-position: -200% 0; }
-            }
-
-            @media (prefers-reduced-motion: reduce) {
-              .coming-soon, .avatar-pulse, .shimmer-text {
-                animation: none !important;
-              }
-              .shimmer-text {
-                background: none;
-                -webkit-text-fill-color: unset;
-                color: var(--text-h);
-              }
-            }
-          `}</style>
+              <p className="mt-4 text-[14px] font-semibold text-[var(--text-h)] sm:text-[15px]">
+                {trustee.name}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
     </div>
