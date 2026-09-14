@@ -1,35 +1,27 @@
 import { useState } from 'react'
-import { Check, Copy, GraduationCap, Users, HeartHandshake } from 'lucide-react'
+import { GraduationCap, Rocket, HeartHandshake, Home, HeartPulse, Leaf, FlaskConical, CheckCircle2, Copy } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import DonateHero from '../components/DonateHero.jsx'
 import { useInView } from '../hooks/useInView.js'
 
 const WHY_GIVE = [
-  'Greenway Pathways Foundation is a newly established, CAMA-registered non-profit committed to creating meaningful and sustainable opportunities for individuals and communities. As we begin this journey, we are focused on building programs that respond to real needs and create lasting impact.',
+  `Greenway Pathways Foundation is a CAMA-registered non-profit organisation committed to creating meaningful and sustainable opportunities for individuals and communities. We develop practical programmes and initiatives that respond to real needs, strengthen communities, and create pathways to a better future.`,
 
-  'Our founding Constitution sets out 17 objectives, including education, youth development, women and girls’ empowerment, and community development. These objectives provide the foundation for our work, while your support helps us transform these commitments into practical programs, initiatives, and opportunities that can improve lives.',
+  `Our founding Constitution provides a clear framework for our work, with 17 objectives spanning education, youth development, women and girls’ empowerment, community development, health and well-being, environmental sustainability, humanitarian support, economic empowerment, inclusion, innovation, good governance, and other areas of sustainable development.`,
 
-  'As a new organization, we are intentionally operating lean and focusing our resources on a small number of impactful programs rather than spreading ourselves too thin. This means every contribution, regardless of size, plays an important role in helping us take our first steps, reach the people we serve, and build a strong foundation for sustainable growth.',
+  `Your support helps us translate these commitments into practical programmes, community initiatives, and opportunities that improve lives.`,
 
-  'Your support today helps us turn our vision into action and gives us the opportunity to build programmes that can create meaningful change for years to come.'
+  `As we develop and expand our programme portfolio, we are taking a focused and responsible approach, prioritising initiatives where available resources can contribute to meaningful and sustainable outcomes. Every contribution, regardless of size, can help us reach more people, strengthen our programmes, and build the partnerships needed to create lasting impact.`
 ]
 
 const WHAT_IT_FUNDS = [
-  {
-    icon: GraduationCap,
-    title: 'Education & Skills',
-    description: 'Learning materials, and vocational training as our first education programs take shape.',
-  },
-  {
-    icon: Users,
-    title: 'Youth & Women\'s programs',
-    description: 'Mentorship, leadership development, and economic empowerment initiatives for young people and women.',
-  },
-  {
-    icon: HeartHandshake,
-    title: 'Community & Operations',
-    description: 'The core resources, dedicated personnel, materials, and partnerships required to establish and deliver our programmes effectively.',
-  },
+  { icon: GraduationCap, text: 'Expand access to education and learning opportunities' },
+  { icon: Rocket, text: 'Support youth skills, innovation, and employability' },
+  { icon: HeartHandshake, text: 'Empower women and girls' },
+  { icon: Home, text: 'Strengthen communities and livelihoods' },
+  { icon: HeartPulse, text: 'Promote health, well-being, and inclusion' },
+  { icon: Leaf, text: 'Advance environmental sustainability' },
+  { icon: FlaskConical, text: 'Support research, knowledge, and evidence-based solutions' },
 ]
 
 function CopyableRow({ label, value }) {
@@ -79,7 +71,7 @@ export default function Donate() {
           Why Your Support Matters
         </h3>
         <p className="mt-5 text-[15px] text-underline lg:text-[18px] text-center leading-relaxed text-[var(--text)]">
-          Your gift builds a pathway from the ground up.
+          Your support helps turn opportunities into lasting impact.
         </p>
         </div>
 
@@ -111,36 +103,32 @@ export default function Donate() {
             </h3>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            {WHAT_IT_FUNDS.map((item, i) => {
-              const Icon = item.icon
-              return (
-                <div
-                  key={item.title}
-                  className={`flex flex-col items-center rounded-2xl border border-[var(--border)] bg-[var(--bg)] px-6 py-9 text-center transition-all duration-500 ${
-                    fundsInView ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
-                  }`}
-                  style={{ transitionDelay: fundsInView ? `${i * 120}ms` : '0ms' }}
-                >
-                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--accent-bg)]">
-                    <Icon size={22} className="text-[var(--accent)]" strokeWidth={1.75} />
-                  </span>
-                  <h3 className="mt-4 text-[16px] font-semibold text-[var(--text-h)]">{item.title}</h3>
-                  <p className="mt-2 text-[13px] leading-relaxed text-[var(--text)]">
-                    {item.description}
-                  </p>
-                </div>
-              )
-            })}
-          </div>
+          <div className="mt-12 grid gap-x-8 gap-y-5 sm:grid-cols-2">
+          {WHAT_IT_FUNDS.map((item, i) => {
+            const Icon = item.icon
+            return (
+              <div
+                key={item.text}
+                className={`flex items-center gap-3 transition-all duration-500 ${
+                  fundsInView ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                }`}
+                style={{ transitionDelay: fundsInView ? `${i * 80}ms` : '0ms' }}
+              >
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--accent-bg)]">
+                  <Icon size={16} className="text-[var(--accent)]" strokeWidth={1.75} />
+                </span>
+                <p className="text-[15px] leading-relaxed text-[var(--text-h)]">{item.text}</p>
+              </div>
+            )
+          })}
+        </div>
 
-          <div className="mt-8 text-center text-[13px] text-[var(--text)]">
-            See the full picture of our work on the{' '}
-            <Link to="/programs" className="font-semibold text-[var(--accent)]">
-              Programs page
-            </Link>
-            .
-          </div>
+        <div className="mt-12 flex items-center justify-center gap-2 text-center">
+          <CheckCircle2 size={20} className="text-[var(--accent)]" />
+          <p className="font-display text-[20px] text-[var(--text-h)] sm:text-[24px]">
+            Together, we can create lasting change
+          </p>
+        </div>
         </div>
       </section>
 
@@ -152,12 +140,13 @@ export default function Donate() {
           }`}
         >
           <div className="text-center">
+            <h2 className="font-display mt-2 text-[24px] text-[var(--text-h)] sm:text-[30px]">
+              DONATE TODAY
+            </h2>
+
             <p className="text-[13px] font-semibold tracking-wide text-[var(--accent)]">
               BANK DETAILS
             </p>
-            <h2 className="font-display mt-2 text-[24px] text-[var(--text-h)] sm:text-[30px]">
-              Give by Bank Transfer
-            </h2>
           </div>
 
           <div className="mt-8 rounded-2xl border border-[var(--border)] bg-[var(--code-bg)] px-6 py-5">
