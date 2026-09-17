@@ -6,11 +6,11 @@ import AboutHero from '../components/AboutHero.jsx'
 const OBJECTS = [
   {
     title: 'Education & Learning',
-    body: 'Promote equitable access to quality, inclusive, and lifelong education through scholarships, educational support, literacy programmes, teacher development, school improvement initiatives, digital learning, curriculum development, and educational research.',
+    body: 'Promote equitable access to quality, inclusive, and lifelong education through scholarships, educational support, literacy programs, teacher development, school improvement initiatives, digital learning, curriculum development, and educational research.',
   },
   {
     title: 'Youth Development',
-    body: 'Empower young people through leadership development, entrepreneurship, mentorship, innovation, vocational education, employability skills, digital skills, and life skills programmes.',
+    body: 'Empower young people through leadership development, entrepreneurship, mentorship, innovation, vocational education, employability skills, digital skills, and life skills programs.',
   },
   {
     title: "Women and Girls' Empowerment",
@@ -66,7 +66,7 @@ const OBJECTS = [
   },
   {
     title: 'Sustainable Development',
-    body: 'Contribute to the achievement of national development priorities, the Sustainable Development Goals (SDGs), and other lawful development frameworks through collaborative programmes and strategic interventions.',
+    body: 'Contribute to the achievement of national development priorities, the Sustainable Development Goals (SDGs), and other lawful development frameworks through collaborative programs and strategic interventions.',
   },
   {
     title: 'General Charitable Purposes',
@@ -137,7 +137,7 @@ export default function About() {
     </div>
 
     <div className="mx-auto max-w-[85%] text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px] lg:text-[22px]">
-      We design and implement innovative, inclusive and sustainable programmes that expand access to education, strengthen livelihoods, promote social inclusion, build resilient communities and improve lives.
+      We design and implement innovative, inclusive and sustainable programs that expand access to education, strengthen livelihoods, promote social inclusion, build resilient communities and improve lives.
     </div>
 
     <div className="mx-auto max-w-[85%] text-[15px] leading-relaxed text-[var(--text)] sm:text-[18px] lg:text-[22px]">
@@ -260,7 +260,7 @@ export default function About() {
                 Mission
               </h4>
               <p className="text-[15px] leading-relaxed text-[var(--text)] sm:text-[16px] md:text-[18px]">
-                To design and implement innovative, inclusive, and sustainable programmes
+                To design and implement innovative, inclusive, and sustainable programs
                 that expand access to education, strengthen livelihoods, promote social
                 inclusion, build resilient communities, and improve lives through
                 strategic partnerships and evidence-based solutions.
@@ -302,7 +302,7 @@ export default function About() {
             </div>
 
             <p className="mt-4 text-[15px] leading-relaxed text-[var(--text)] text-center sm:text-left sm:text-[18px] lg:text-[20px]">
-              Our constitutional objects guide focused programmes that address interconnected development challenges and create meaningful, sustainable opportunities.
+              Our constitutional objects guide focused programs that address interconnected development challenges and create meaningful, sustainable opportunities.
             </p>
           </div>
 

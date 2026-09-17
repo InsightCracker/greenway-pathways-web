@@ -15,7 +15,7 @@ const STEPS = [
   {
     icon: Rocket,
     title: 'Implement',
-    description: 'We work with partners to deliver practical programmes that create meaningful opportunities.',
+    description: 'We work with partners to deliver practical programs that create meaningful opportunities.',
   },
   {
     icon: BarChart3,

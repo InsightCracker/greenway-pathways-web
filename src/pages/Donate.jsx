@@ -5,13 +5,13 @@ import DonateHero from '../components/DonateHero.jsx'
 import { useInView } from '../hooks/useInView.js'
 
 const WHY_GIVE = [
-  `Greenway Pathways Foundation is a CAMA-registered non-profit organisation committed to creating meaningful and sustainable opportunities for individuals and communities. We develop practical programmes and initiatives that respond to real needs, strengthen communities, and create pathways to a better future.`,
+  `Greenway Pathways Foundation is a CAMA-registered non-profit organisation committed to creating meaningful and sustainable opportunities for individuals and communities. We develop practical programs and initiatives that respond to real needs, strengthen communities, and create pathways to a better future.`,
 
   `Our founding Constitution provides a clear framework for our work, with 17 objectives spanning education, youth development, women and girls’ empowerment, community development, health and well-being, environmental sustainability, humanitarian support, economic empowerment, inclusion, innovation, good governance, and other areas of sustainable development.`,
 
-  `Your support helps us translate these commitments into practical programmes, community initiatives, and opportunities that improve lives.`,
+  `Your support helps us translate these commitments into practical programs, community initiatives, and opportunities that improve lives.`,
 
-  `As we develop and expand our programme portfolio, we are taking a focused and responsible approach, prioritising initiatives where available resources can contribute to meaningful and sustainable outcomes. Every contribution, regardless of size, can help us reach more people, strengthen our programmes, and build the partnerships needed to create lasting impact.`
+  `As we develop and expand our programme portfolio, we are taking a focused and responsible approach, prioritising initiatives where available resources can contribute to meaningful and sustainable outcomes. Every contribution, regardless of size, can help us reach more people, strengthen our programs, and build the partnerships needed to create lasting impact.`
 ]
 
 const WHAT_IT_FUNDS = [

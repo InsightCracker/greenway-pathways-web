@@ -100,7 +100,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Programmes */}
+          {/* Programs */}
           <div>
             <p className="text-[15px] font-semibold uppercase tracking-[0.14em] text-[var(--accent)] sm:text-[18px]">
               Explore

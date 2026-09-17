@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import ProgramCard from './ProgramCard.jsx'
 import { usePrograms } from '../context/ProgramsContext.jsx'
 
-// Number of programmes to show on the homepage teaser before "See all".
+// Number of programs to show on the homepage teaser before "See all".
 const FEATURED_COUNT = 3
 
 export default function ProgramSection() {
@@ -56,12 +56,12 @@ export default function ProgramSection() {
         </div>
 
         {loading && (
-          <p className="mt-10 text-center text-[var(--text)]">Loading programmes…</p>
+          <p className="mt-10 text-center text-[var(--text)]">Loading programs…</p>
         )}
 
         {error && (
           <p className="mt-10 text-center text-red-500">
-            Couldn't load programmes: {error}
+            Couldn't load programs: {error}
           </p>
         )}
 

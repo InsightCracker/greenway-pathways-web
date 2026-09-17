@@ -6,7 +6,7 @@ const WAYS_TO_PARTNER = [
   {
     icon: HandCoins,
     title: 'Fund',
-    description: 'Support programmes and initiatives that create opportunities.',
+    description: 'Support programs and initiatives that create opportunities.',
   },
   {
     icon: Handshake,
