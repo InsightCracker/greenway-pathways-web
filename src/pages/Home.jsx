@@ -8,7 +8,6 @@ import NewsSection from '../components/NewsSection.jsx'
 import WhoWeServeSection from '../components/Services.jsx'
 import PartnershipSection from '../components/PartnershipSection.jsx'
 import ApproachSection from '../components/Approach.jsx'
-import { ArrowRight } from 'lucide-react'
 
 export default function Home() {
   return (
