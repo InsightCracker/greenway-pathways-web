@@ -5,7 +5,7 @@ export const PROGRAMS = [
     article: '11.1',
     image: 28593042,
     summary: 'Equitable access to quality, inclusive, and lifelong education.',
-    body: 'Promote equitable access to quality, inclusive, and lifelong education through scholarships, educational support, literacy programmes, teacher development, school improvement initiatives, digital learning, curriculum development, educational research, and other educational interventions.',
+    body: 'Promote equitable access to quality, inclusive, and lifelong education through scholarships, educational support, literacy programs, teacher development, school improvement initiatives, digital learning, curriculum development, educational research, and other educational interventions.',
   },
   {
     slug: 'youth-development',
@@ -13,7 +13,7 @@ export const PROGRAMS = [
     article: '11.2',
     image: 21932230,
     summary: 'Leadership, entrepreneurship, and vocational skills for young people.',
-    body: 'Empower young people through leadership development, entrepreneurship, mentorship, innovation, vocational education, employability skills, civic engagement, digital skills, and life skills programmes.',
+    body: 'Empower young people through leadership development, entrepreneurship, mentorship, innovation, vocational education, employability skills, civic engagement, digital skills, and life skills programs.',
   },
   {
     slug: 'women-and-girls-empowerment',
